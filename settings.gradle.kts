@@ -1,3 +1,4 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     repositories {
         google {
@@ -20,5 +21,18 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AndroidCodeChallenge"
-include(":app")
- 
+
+include(":internet")
+include(":location")
+include(":core")
+
+include(":core:common")
+
+include(":internet:app")
+include(":internet:data")
+include(":internet:domain")
+
+
+include(":location:app")
+include(":location:data")
+include(":location:domain")
