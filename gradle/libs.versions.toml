@@ -20,6 +20,11 @@ ksp = "2.2.20-2.0.3"
 timber = "5.0.1"
 truth = "1.4.5"
 mockk = "1.14.6"
+coroutines = "1.10.2"
+room = "2.8.2"
+sqlcipher = "4.5.4"
+# Security
+securityCrypto = "1.1.0"
 
 
 [libraries]
@@ -63,6 +68,25 @@ timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "tim
 
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 google-truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+
+
+
+# Security
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+
+
+
+# Room
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+# SQLCipher
+sqlcipher = { group = "net.zetetic", name = "android-database-sqlcipher", version.ref = "sqlcipher" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
