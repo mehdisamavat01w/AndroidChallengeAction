@@ -51,12 +51,6 @@ jobs:
         run: ./gradlew :internet:domain:testDebugUnitTest :internet:data:testDebugUnitTest :internet:app:testDebugUnitTest --stacktrace
         continue-on-error: false
       
-      - name: Generate Test Reports
-        if: always()
-        run: |
-          echo "Generating test reports..."
-          ./gradlew jacocoTestReport --stacktrace || true
-      
       - name: Upload Test Results
         if: always()
         uses: actions/upload-artifact@v4
@@ -65,15 +59,6 @@ jobs:
           path: |
             **/build/reports/tests/
             **/build/test-results/
-          retention-days: 30
-      
-      - name: Upload Coverage Reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-reports
-          path: |
-            **/build/reports/jacoco/
           retention-days: 30
       
       - name: Upload Location App APK
