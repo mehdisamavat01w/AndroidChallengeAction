@@ -2,14 +2,8 @@ package com.mahdisamavat.core.logger
 
 import timber.log.Timber
 
-/**
- * All log messages include:
- * - Tag: Identifies the source component
- * - Message: Description of the event
- * - Optional Throwable: For error tracking
- */
 class TimberLogger : Logger {
-    
+
     override fun d(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) {
             Timber.tag(tag).d(throwable, message)
@@ -17,7 +11,7 @@ class TimberLogger : Logger {
             Timber.tag(tag).d(message)
         }
     }
-    
+
     override fun i(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) {
             Timber.tag(tag).i(throwable, message)
@@ -25,7 +19,7 @@ class TimberLogger : Logger {
             Timber.tag(tag).i(message)
         }
     }
-    
+
     override fun w(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) {
             Timber.tag(tag).w(throwable, message)
@@ -33,7 +27,7 @@ class TimberLogger : Logger {
             Timber.tag(tag).w(message)
         }
     }
-    
+
     override fun e(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) {
             Timber.tag(tag).e(throwable, message)
@@ -41,7 +35,7 @@ class TimberLogger : Logger {
             Timber.tag(tag).e(message)
         }
     }
-    
+
     override fun v(tag: String, message: String, throwable: Throwable?) {
         if (throwable != null) {
             Timber.tag(tag).v(throwable, message)

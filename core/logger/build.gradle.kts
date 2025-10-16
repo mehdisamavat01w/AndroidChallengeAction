@@ -29,7 +29,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
     kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.JVM_17
@@ -40,4 +39,8 @@ android {
 dependencies {
     api(libs.timber)
 
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.robolectric)
 }

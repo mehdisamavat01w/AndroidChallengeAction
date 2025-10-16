@@ -23,8 +23,8 @@ mockk = "1.14.6"
 coroutines = "1.10.2"
 room = "2.8.2"
 sqlcipher = "4.5.4"
-# Security
 securityCrypto = "1.1.0"
+robolectric = "4.16"
 
 
 [libraries]
@@ -68,6 +68,7 @@ timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "tim
 
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 google-truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
