@@ -6,10 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.mehdisamavat.domain"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "com.mahdisamavat.internet.domain"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
@@ -28,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
         compilerOptions {
