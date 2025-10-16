@@ -1,40 +1,303 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+# ============================================================
+# ANDROID BUILD FILES
+# ============================================================
+
+# Built application files
 *.apk
 *.ap_
 *.aab
+
+# Files for the Dalvik VM
 *.dex
+
+# Java class files
 *.class
+
+# Generated files
 bin/
 gen/
 out/
-build/
+release/
+
+# ============================================================
+# GRADLE
+# ============================================================
+
+# Gradle files
 .gradle/
+.gradle-cache/
 build/
+*/build/
+**/build/
+
+# Gradle wrapper JAR must be included for CI/CD!
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration
 local.properties
+
+# Log files
+*.log
+test_*.log
+
+# ============================================================
+# ANDROID STUDIO / INTELLIJ IDEA
+# ============================================================
+
+# IntelliJ IDEA
 *.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-.idea_modules/
-*.jks
-*.keystore
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/navEditor.xml
+.idea/deploymentTargetDropDown.xml
+.idea/caches/
+.idea/modules/
+.idea/vcs.xml
+.idea/.name
+.idea/codeStyles/
+.idea/inspectionProfiles/
+
+# Keep useful IntelliJ configurations
+!.idea/runConfigurations/
+!.idea/codeStyleSettings.xml
+
+# Android Studio Navigation editor
+.navigation/
+
+# Android Studio captures folder
+captures/
 .externalNativeBuild
 .cxx/
+
+# ============================================================
+# KOTLIN
+# ============================================================
+
+*.kotlin_module
+.kotlin/
+
+# ============================================================
+# SECURITY & SECRETS
+# ============================================================
+
+# Keystore files (NEVER commit these!)
+*.jks
+*.keystore
+*.p12
+
+# Signing configuration
+signing.properties
+keystore.properties
+
+# API keys and secrets
 google-services.json
+app/google-services.json
+serviceAccountKey.json
+src/main/resources/serviceAccountKey.json
+credentials.json
+service-account.json
+firebase-adminsdk.json
+*-credentials.json
+*-secrets.json
+*.secrets
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# SSL/TLS certificates
+*.crt
+*.key
+*.pem
+
+# ============================================================
+# DATABASE FILES
+# ============================================================
+
+# SQLite databases (except if you want sample data in repo)
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+*.db-journal
+
+# ============================================================
+# TESTING & COVERAGE
+# ============================================================
+
+# Test results
+test-results/
+**/test-results/
+
+# Coverage reports
+coverage/
+*.exec
+.jacoco/
+jacoco/
+
+# Android profiling
 *.hprof
+
+# ============================================================
+# LOGS
+# ============================================================
+
+# Log files
+*.log
+*.log.*
+logs/
+
+# Crash logs
+hs_err_pid*
+replay_pid*
+
+# ============================================================
+# LINT & CODE QUALITY
+# ============================================================
+
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+*.lint
+
+# ============================================================
+# NATIVE CODE (NDK)
+# ============================================================
+
+obj/
+.externalNativeBuild/
+
+# ============================================================
+# PACKAGE FILES
+# ============================================================
+
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================================
+# OPERATING SYSTEM FILES
+# ============================================================
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+*~.nib
+
+# Linux
+*~
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# BACKUP & TEMPORARY FILES
+# ============================================================
+
+*.bak
+*.orig
+*.tmp
+*.swp
+*.autosave
+
+# ============================================================
+# OTHER IDEs
+# ============================================================
+
+# VSCode
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+nbproject/
+
+# ============================================================
+# BUILD TOOLS
+# ============================================================
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+fastlane/readme.md
+
+# Proguard
+proguard/
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json
+
+# ============================================================
+# CI/CD & DEPLOYMENT
+# ============================================================
+
+# Terraform (if using Infrastructure as Code)
+*.tfstate
+*.tfstate.*
+
+# Docker override files (keep base docker-compose.yml)
+docker-compose.override.yml
+
+# Uploaded files / temp directories
+uploads/
+temp/
+
+# ============================================================
+# OPTIONAL: Node/Python (if using for tooling)
+# ============================================================
+
+# Node modules (if using Node.js build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+*.pyc
+
+# ============================================================
+# PROJECT SPECIFIC
+# ============================================================
+
+# Remove these if you're not using them:
+/nowinandroid
+sandbox/
+
+# ============================================================
+# END OF .gitignore
+# ============================================================
