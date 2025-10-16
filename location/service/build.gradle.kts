@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.model)
     implementation(projects.core.common)
     implementation(projects.core.logger)
     implementation(projects.location.data)
