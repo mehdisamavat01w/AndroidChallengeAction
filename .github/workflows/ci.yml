@@ -81,7 +81,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: location-debug
-          path: location/build/outputs/apk/debug/*.apk
+          path: location/app/build/outputs/apk/debug/*.apk
           retention-days: 30
       
       - name: Upload Internet App APK
@@ -89,7 +89,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: internet-debug
-          path: internet/build/outputs/apk/debug/*.apk
+          path: internet/app/build/outputs/apk/debug/*.apk
           retention-days: 30
       
       - name: Verify Tests Passed
@@ -135,11 +135,11 @@ jobs:
         run: chmod +x gradlew
       
       - name: Run Lint - Location App
-        run: ./gradlew :location:lintDebug --stacktrace
+        run: ./gradlew :location:app:lintDebug --stacktrace
         continue-on-error: true
       
       - name: Run Lint - Internet App
-        run: ./gradlew :internet:lintDebug --stacktrace
+        run: ./gradlew :internet:app:lintDebug --stacktrace
         continue-on-error: true
       
       - name: Upload Lint Reports
@@ -148,8 +148,8 @@ jobs:
         with:
           name: lint-reports
           path: |
-            location/build/reports/lint-results-debug.html
-            internet/build/reports/lint-results-debug.html
+            location/app/build/reports/lint-results-debug.html
+            internet/app/build/reports/lint-results-debug.html
           retention-days: 30
 
 
