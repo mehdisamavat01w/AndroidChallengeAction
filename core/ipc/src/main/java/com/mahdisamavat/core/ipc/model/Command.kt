@@ -6,7 +6,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 sealed class Command {
 
-
     @Serializable
     data object StartService : Command()
 
@@ -21,7 +20,6 @@ sealed class Command {
 
     @Serializable
     data object GetLatestLocation : Command()
-
 
     fun getName(): String = when (this) {
         is StartService -> "START_SERVICE"

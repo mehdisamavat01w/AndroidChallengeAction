@@ -6,7 +6,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 sealed class Response {
 
-
     @Serializable
     data class Success(
         val message: String,

@@ -138,16 +138,23 @@ class MainViewModel(
 
             when (val result = locationQueryRepository.getAllLocations()) {
                 is Result.Success -> {
-                    val locations = result.data as List<Location>
-                    logger.i(TAG, "Retrieved ${locations.size} locations")
+                    val data = result.data
+                    if (data is List<*>) {
+                        val locations = data.filterIsInstance<Location>()
+                        logger.i(TAG, "Retrieved ${locations.size} locations")
 
-                    _state.value = _state.value.copy(
-                        isLoading = false,
-                        locations = locations,
-                        latestLocation = null
-                    )
+                        _state.value = _state.value.copy(
+                            isLoading = false,
+                            locations = locations,
+                            latestLocation = null
+                        )
 
-                    _effect.emit(MainContract.Effect.ShowToast("Retrieved ${locations.size} locations"))
+                        _effect.emit(MainContract.Effect.ShowToast("Retrieved ${locations.size} locations"))
+                    } else {
+                        logger.e(TAG, "Unexpected data type in result")
+                        _state.value =
+                            _state.value.copy(isLoading = false, error = "Invalid data format")
+                    }
                 }
 
                 is Result.Failure -> {
@@ -177,7 +184,7 @@ class MainViewModel(
 
             when (val result = locationQueryRepository.getLatestLocation()) {
                 is Result.Success -> {
-                    val location = result.data as Location
+                    val location = result.data as? Location
                     logger.i(TAG, "Retrieved latest location: ${location?.id}")
 
                     _state.value = _state.value.copy(
