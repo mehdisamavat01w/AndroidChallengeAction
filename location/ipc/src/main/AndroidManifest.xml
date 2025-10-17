@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <permission
+        android:name="com.mahdisamavat.PERMISSION_IPC"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application>
+        <provider
+            android:name=".provider.LocationContentProvider"
+            android:authorities="com.mahdisamavat.location.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.mahdisamavat.PERMISSION_IPC" />
+
+        ]
+        <receiver
+            android:name=".receiver.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.NetworkChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.CommandBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.mahdisamavat.PERMISSION_IPC">
+            <intent-filter>
+                <action android:name="com.mahdisamavat.location.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>

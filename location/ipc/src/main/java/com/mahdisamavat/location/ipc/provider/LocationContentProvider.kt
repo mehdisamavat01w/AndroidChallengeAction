@@ -68,7 +68,6 @@ class LocationContentProvider : ContentProvider() {
             logger?.i(TAG, "LocationContentProvider created")
             return true
         } catch (e: Exception) {
-            timber.log.Timber.e(e, "Failed to initialize ContentProvider: ${e.message}")
             return true
         }
     }
