@@ -2,13 +2,13 @@ name: Android CI/CD
 
 on:
   push:
-    branches: 
+    branches:
       - main
       - develop
       - 'release/**'
       - 'hotfix/**'
   pull_request:
-    branches: 
+    branches:
       - main
       - develop
   workflow_dispatch:
@@ -17,124 +17,72 @@ jobs:
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 20
+    concurrency:
+      group: android-build
+      cancel-in-progress: true
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+          fetch-depth: 1
+
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
-      
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
-      - name: Build Location App (Debug)
-        run: ./gradlew :location:app:assembleDebug --stacktrace
-      
-      - name: Build Internet App (Debug)
-        run: ./gradlew :internet:app:assembleDebug --stacktrace
-      
-      - name: Run Unit Tests - Core Modules
-        run: ./gradlew :core:logger:test :core:common:test :core:model:test :core:security:test :core:ipc:test --stacktrace
-      
-      - name: Run Unit Tests - Location Modules
-        run: ./gradlew :location:domain:testDebugUnitTest :location:data:testDebugUnitTest :location:service:testDebugUnitTest :location:app:testDebugUnitTest --stacktrace
-        continue-on-error: false
-      
-      - name: Run Unit Tests - Internet Modules
-        run: ./gradlew :internet:domain:testDebugUnitTest :internet:data:testDebugUnitTest :internet:app:testDebugUnitTest --stacktrace
-        continue-on-error: false
-      
-      - name: Upload Test Results
-        if: always()
+
+      - run: chmod +x gradlew
+
+      - run: ./gradlew clean
+
+      - run: ./gradlew :location:app:assembleDebug :internet:app:assembleDebug --stacktrace --no-daemon --max-workers=2
+
+      - run: ./gradlew test --stacktrace --no-daemon --max-workers=2
+
+      - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: |
             **/build/reports/tests/
             **/build/test-results/
-          retention-days: 30
-      
-      - name: Upload Location App APK
-        if: success()
+          retention-days: 7
+
+      - if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: location-debug
-          path: location/app/build/outputs/apk/debug/*.apk
-          retention-days: 30
-      
-      - name: Upload Internet App APK
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: internet-debug
-          path: internet/app/build/outputs/apk/debug/*.apk
-          retention-days: 30
-      
-      - name: Verify Tests Passed
-        if: failure()
-        run: |
-          echo "Tests failed! Pipeline will exit with error."
-          exit 1
-      
-      - name: Generate Summary
-        if: always()
-        run: |
-          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Location App built successfully" >> $GITHUB_STEP_SUMMARY
-          echo "Internet App built successfully" >> $GITHUB_STEP_SUMMARY
-          echo "All tests executed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Test Results" >> $GITHUB_STEP_SUMMARY
-          echo "- Scenario tests: 4/4" >> $GITHUB_STEP_SUMMARY
-          echo "- Unit tests: Executed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Artifacts" >> $GITHUB_STEP_SUMMARY
-          echo "- Location App APK uploaded" >> $GITHUB_STEP_SUMMARY
-          echo "- Internet App APK uploaded" >> $GITHUB_STEP_SUMMARY
-          echo "- Test reports uploaded" >> $GITHUB_STEP_SUMMARY
+          name: apk-files
+          path: |
+            location/app/build/outputs/apk/debug/*.apk
+            internet/app/build/outputs/apk/debug/*.apk
+          retention-days: 7
 
   lint:
     name: Code Quality Checks
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 10
+    concurrency:
+      group: android-lint
+      cancel-in-progress: true
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
-      
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
-      - name: Run Lint - Location App
-        run: ./gradlew :location:app:lintDebug --stacktrace
-        continue-on-error: true
-      
-      - name: Run Lint - Internet App
-        run: ./gradlew :internet:app:lintDebug --stacktrace
-        continue-on-error: true
-      
-      - name: Upload Lint Reports
-        if: always()
+
+      - run: chmod +x gradlew
+
+      - run: ./gradlew lintDebug --stacktrace --no-daemon --max-workers=2 || true
+
+      - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lint-reports
-          path: |
-            location/app/build/reports/lint-results-debug.html
-            internet/app/build/reports/lint-results-debug.html
-          retention-days: 30
-
-
+          path: '**/build/reports/lint-results*.html'
+          retention-days: 7
