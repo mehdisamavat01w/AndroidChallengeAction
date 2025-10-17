@@ -1,8 +1,6 @@
 package com.mahdisamavat.location
 
 import android.app.Application
-import android.content.Intent
-import androidx.core.content.ContextCompat
 import com.mahdisamavat.core.logger.Logger
 import com.mahdisamavat.location.service.LocationCollectionService
 import dagger.hilt.android.HiltAndroidApp
@@ -47,13 +45,7 @@ class LocationApp : Application() {
             logger.d(TAG, "Service currently running: $isRunning")
 
             if (!isRunning) {
-                logger.i(TAG, "Service should be running, starting it now")
-                try {
-                    val serviceIntent = Intent(this, LocationCollectionService::class.java)
-                    ContextCompat.startForegroundService(this, serviceIntent)
-                } catch (e: Exception) {
-                    logger.e(TAG, "Failed to start service on app launch", e)
-                }
+                logger.i(TAG, "Service should be running, will start from MainActivity")
             }
         }
     }
