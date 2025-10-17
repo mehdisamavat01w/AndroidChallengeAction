@@ -52,23 +52,41 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
+    implementation(projects.location.service)
+    implementation(projects.location.ipc)
     implementation(projects.location.domain)
     implementation(projects.location.data)
 
     implementation(projects.core.common)
-
+    implementation(projects.core.model)
+    implementation(projects.core.ipc)
+    implementation(projects.core.security)
+    implementation(projects.core.logger)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.room.runtime)
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.navigation.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
 
+    testImplementation(libs.junit)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.hilt.android.testing)
+    testImplementation(libs.mockk)
+    kspTest(libs.hilt.compiler)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.hilt.android.testing)
+    kspAndroidTest(libs.hilt.compiler)
 }

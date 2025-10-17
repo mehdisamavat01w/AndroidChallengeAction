@@ -1,7 +1,7 @@
 package com.mahdisamavat.location.di
 
+import com.mahdisamavat.core.ipc.serializer.MessageSerializer
 import com.mahdisamavat.core.logger.Logger
-import com.mahdisamavat.core.logger.TimberLogger
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,11 +11,12 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object IPCModule {
+
 
     @Provides
     @Singleton
-    fun provideLogger(): Logger {
-        return TimberLogger()
+    fun provideMessageSerializer(logger: Logger): MessageSerializer {
+        return MessageSerializer(logger)
     }
 }
