@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.mahdisamavat.internet.presentation.main.MainScreen
 import com.mahdisamavat.internet.ui.theme.AndoTheme
 
 
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AndoTheme {
-
+                MainScreen()
             }
         }
     }
