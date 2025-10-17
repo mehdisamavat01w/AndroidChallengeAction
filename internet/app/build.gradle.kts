@@ -54,6 +54,9 @@ dependencies {
     implementation(projects.internet.data)
 
     implementation(projects.core.common)
+    implementation(projects.core.model)
+    implementation(projects.core.ipc)
+    implementation(projects.core.logger)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -62,9 +65,15 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.navigation.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
 
+    testImplementation(libs.junit)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.turbine)
 }
