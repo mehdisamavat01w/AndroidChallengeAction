@@ -40,6 +40,7 @@ android {
 dependencies {
     implementation(projects.core.common)
     implementation(projects.core.logger)
+    implementation(projects.core.model)
 
     implementation(libs.androidx.core.ktx)
 
