@@ -123,7 +123,7 @@ class LocationContentProvider : ContentProvider() {
 
                     locations.forEach { location ->
                         cursor.addRow(
-                            arrayOf(
+                            arrayOf<Any?>(
                                 location.id,
                                 location.latitude,
                                 location.longitude,
@@ -183,7 +183,7 @@ class LocationContentProvider : ContentProvider() {
                     if (location != null) {
                         logger?.i(TAG, "Retrieved latest location: id=${location.id}")
                         cursor.addRow(
-                            arrayOf(
+                            arrayOf<Any?>(
                                 location.id,
                                 location.latitude,
                                 location.longitude,
