@@ -42,6 +42,12 @@ sealed class AppError(
         override val context: String
     ) : AppError(message, cause, recoverable, context)
 
+    data class IPC(
+        override val message: String,
+        override val cause: Throwable?,
+        override val recoverable: Boolean,
+        override val context: String
+    ) : AppError(message, cause, recoverable, context)
 
     data class Unknown(
         override val message: String,

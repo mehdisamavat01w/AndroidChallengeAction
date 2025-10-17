@@ -188,7 +188,7 @@ class LocationCollectionService : Service() {
         val channel = NotificationChannel(
             CHANNEL_ID,
             CHANNEL_NAME,
-            NotificationManager.IMPORTANCE_LOW // Low importance for persistent notifications
+            NotificationManager.IMPORTANCE_LOW
         ).apply {
             description = "Notification for location collection service"
             setShowBadge(false)
@@ -220,7 +220,7 @@ class LocationCollectionService : Service() {
             .setContentText("Collected: $locationCount locations • $uptime")
             .setSmallIcon(android.R.drawable.ic_menu_mylocation)
             .setContentIntent(pendingIntent)
-            .setOngoing(true) // Cannot be dismissed
+            .setOngoing(true)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
             .build()
