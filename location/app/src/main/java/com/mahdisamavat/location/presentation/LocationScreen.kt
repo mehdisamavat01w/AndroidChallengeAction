@@ -44,15 +44,36 @@ fun LocationScreen(
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
 
-    val permissionLauncher = rememberLauncherForActivityResult(
+    val backgroundPermissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            Toast.makeText(context, "Background location access granted", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(
+                context,
+                "Background location required for continuous tracking",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    val foregroundPermissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestMultiplePermissions()
     ) { permissions ->
-        val allGranted = permissions.values.all { it }
-        if (allGranted) {
-            Toast.makeText(context, "Permissions granted", Toast.LENGTH_SHORT).show()
+        val locationGranted = permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
+                permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+
+        if (locationGranted) {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+                backgroundPermissionLauncher.launch(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+            }
         } else {
-            Toast.makeText(context, "Permissions required for location tracking", Toast.LENGTH_LONG)
-                .show()
+            Toast.makeText(
+                context,
+                "Location permission is required for this app",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
@@ -66,7 +87,7 @@ fun LocationScreen(
             permissions.add(Manifest.permission.POST_NOTIFICATIONS)
         }
 
-        permissionLauncher.launch(permissions.toTypedArray())
+        foregroundPermissionLauncher.launch(permissions.toTypedArray())
 
         viewModel.effect.collect { effect ->
             when (effect) {
