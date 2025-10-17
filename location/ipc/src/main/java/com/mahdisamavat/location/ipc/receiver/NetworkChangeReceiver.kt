@@ -97,9 +97,24 @@ class NetworkChangeReceiver : BroadcastReceiver() {
 
     private fun startLocationService(context: Context) {
         try {
-            val serviceIntent = Intent(context, LocationCollectionService::class.java)
-            ContextCompat.startForegroundService(context, serviceIntent)
-            logger.i(TAG, "Location collection service started successfully")
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                logger.d(TAG, "Android 12+: Starting service via activity")
+                val activityIntent = Intent().apply {
+                    setClassName(
+                        "com.mahdisamavat.location",
+                        "com.mahdisamavat.location.MainActivity"
+                    )
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    putExtra("START_SERVICE", true)
+                }
+                context.startActivity(activityIntent)
+                logger.i(TAG, "Service start requested via activity")
+            } else {
+                val serviceIntent = Intent(context, LocationCollectionService::class.java)
+                ContextCompat.startForegroundService(context, serviceIntent)
+                logger.i(TAG, "Location collection service started successfully")
+            }
         } catch (e: Exception) {
             logger.e(TAG, "Failed to start location collection service", e)
         }

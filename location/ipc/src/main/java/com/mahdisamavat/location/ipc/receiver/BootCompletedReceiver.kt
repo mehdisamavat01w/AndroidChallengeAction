@@ -56,11 +56,30 @@ class BootCompletedReceiver : BroadcastReceiver() {
 
     private fun startLocationService(context: Context) {
         try {
+            if (LocationCollectionService.isServiceRunning()) {
+                logger.i(TAG, "Service already running")
+                return
+            }
+
             val serviceIntent = Intent(context, LocationCollectionService::class.java)
             ContextCompat.startForegroundService(context, serviceIntent)
-            logger.i(TAG, "Location collection service started successfully")
+            logger.i(TAG, "Location collection service started after boot")
         } catch (e: Exception) {
-            logger.e(TAG, "Failed to start location collection service", e)
+            logger.e(TAG, "Failed to start service, will retry via activity", e)
+            try {
+                val activityIntent = Intent().apply {
+                    setClassName(
+                        "com.mahdisamavat.location",
+                        "com.mahdisamavat.location.MainActivity"
+                    )
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    putExtra("START_SERVICE", true)
+                }
+                context.startActivity(activityIntent)
+                logger.i(TAG, "Service start requested via activity fallback")
+            } catch (e2: Exception) {
+                logger.e(TAG, "Failed to start service via activity", e2)
+            }
         }
     }
 }

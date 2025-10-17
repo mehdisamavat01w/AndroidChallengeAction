@@ -92,19 +92,53 @@ class CommandBroadcastReceiver : BroadcastReceiver() {
         try {
             val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             prefs.edit().putBoolean(KEY_SERVICE_ENABLED, true).apply()
+            logger.i(TAG, "Service enabled flag set to true")
 
-            val serviceIntent = Intent(context, LocationCollectionService::class.java)
-            ContextCompat.startForegroundService(context, serviceIntent)
-
-            logger.i(TAG, "Location collection service started successfully")
-
-            sendResponse(
-                context,
-                Response.ServiceState(
-                    isRunning = true,
-                    message = "Location collection service started"
+            if (LocationCollectionService.isServiceRunning()) {
+                logger.i(TAG, "Service already running")
+                sendResponse(
+                    context,
+                    Response.ServiceState(
+                        isRunning = true,
+                        message = "Service is already running"
+                    )
                 )
-            )
+                return
+            }
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                logger.d(TAG, "Android 12+: Using activity trampoline to start service")
+                val activityIntent = Intent().apply {
+                    setClassName(
+                        "com.mahdisamavat.location",
+                        "com.mahdisamavat.location.MainActivity"
+                    )
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    putExtra("START_SERVICE", true)
+                }
+                context.startActivity(activityIntent)
+
+                sendResponse(
+                    context,
+                    Response.ServiceState(
+                        isRunning = true,
+                        message = "Service start requested"
+                    )
+                )
+            } else {
+                val serviceIntent = Intent(context, LocationCollectionService::class.java)
+                ContextCompat.startForegroundService(context, serviceIntent)
+                logger.i(TAG, "Service started successfully")
+
+                sendResponse(
+                    context,
+                    Response.ServiceState(
+                        isRunning = true,
+                        message = "Location collection service started"
+                    )
+                )
+            }
         } catch (e: Exception) {
             logger.e(TAG, "Failed to start service", e)
             sendResponse(
@@ -122,11 +156,24 @@ class CommandBroadcastReceiver : BroadcastReceiver() {
         try {
             val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             prefs.edit().putBoolean(KEY_SERVICE_ENABLED, false).apply()
+            logger.i(TAG, "Service enabled flag set to false")
+
+            if (!LocationCollectionService.isServiceRunning()) {
+                logger.i(TAG, "Service not running, nothing to stop")
+                sendResponse(
+                    context,
+                    Response.ServiceState(
+                        isRunning = false,
+                        message = "Service is not running"
+                    )
+                )
+                return
+            }
 
             val serviceIntent = Intent(context, LocationCollectionService::class.java)
-            context.stopService(serviceIntent)
+            val stopped = context.stopService(serviceIntent)
 
-            logger.i(TAG, "Location collection service stopped successfully")
+            logger.i(TAG, "Stop service called, result: $stopped")
 
             sendResponse(
                 context,
