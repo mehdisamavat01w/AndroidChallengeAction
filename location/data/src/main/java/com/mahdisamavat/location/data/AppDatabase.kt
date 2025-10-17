@@ -8,7 +8,7 @@ import com.mahdisamavat.location.data.entity.LocationEntity
 @Database(
     entities = [LocationEntity::class],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     

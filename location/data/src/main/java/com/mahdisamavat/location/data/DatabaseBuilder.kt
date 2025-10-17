@@ -57,7 +57,7 @@ object DatabaseBuilder {
                     logger.d(TAG, "Database opened")
                 }
             })
-            .fallbackToDestructiveMigration()
+            .fallbackToDestructiveMigration(true)
             .build()
 
         logger.i(TAG, "Encrypted database built successfully")
