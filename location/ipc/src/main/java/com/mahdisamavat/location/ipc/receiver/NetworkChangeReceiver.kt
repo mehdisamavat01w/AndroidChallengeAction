@@ -1,7 +1,6 @@
 package com.mahdisamavat.location.ipc.receiver
 
 import android.annotation.SuppressLint
-import android.app.ActivityManager
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -28,6 +27,7 @@ class NetworkChangeReceiver : BroadcastReceiver() {
     }
 
     override fun onReceive(context: Context, intent: Intent) {
+        @Suppress("DEPRECATION")
         if (intent.action == ConnectivityManager.CONNECTIVITY_ACTION) {
             logger.i(TAG, "Network connectivity changed")
 
@@ -61,8 +61,13 @@ class NetworkChangeReceiver : BroadcastReceiver() {
         } else {
             @Suppress("DEPRECATION")
             val networkInfo = connectivityManager.activeNetworkInfo
-            if (networkInfo?.isConnected == true) {
-                "Connected (${networkInfo.typeName})"
+
+            @Suppress("DEPRECATION")
+            val connected = networkInfo?.isConnected == true
+            if (connected) {
+                @Suppress("DEPRECATION")
+                val name = networkInfo?.typeName ?: "Unknown"
+                "Connected ($name)"
             } else {
                 "Disconnected"
             }
@@ -79,7 +84,7 @@ class NetworkChangeReceiver : BroadcastReceiver() {
             return
         }
 
-        val isRunning = isServiceRunning(context, LocationCollectionService::class.java)
+        val isRunning = LocationCollectionService.isServiceRunning()
 
         if (!isRunning) {
             logger.w(TAG, "Service should be running but isn't, restarting...")
@@ -87,14 +92,6 @@ class NetworkChangeReceiver : BroadcastReceiver() {
         } else {
             logger.d(TAG, "Service is running correctly")
         }
-    }
-
-
-    private fun isServiceRunning(context: Context, serviceClass: Class<*>): Boolean {
-        val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        @Suppress("DEPRECATION")
-        return manager.getRunningServices(Integer.MAX_VALUE)
-            .any { it.service.className == serviceClass.name }
     }
 
 

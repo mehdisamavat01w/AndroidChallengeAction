@@ -55,6 +55,11 @@ class LocationCollectionService : Service() {
         private const val CHANNEL_NAME = "Location Collection"
 
         private const val COLLECTION_INTERVAL_MS = 60_000L
+
+        @Volatile
+        private var isRunning = false
+
+        fun isServiceRunning(): Boolean = isRunning
     }
 
     override fun onCreate() {
@@ -68,7 +73,7 @@ class LocationCollectionService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         logger.i(TAG, "Service started (intent=${intent?.action}, flags=$flags, startId=$startId)")
         startTime = System.currentTimeMillis()
-
+        isRunning = true
 
         startForegroundServiceWithNotification()
 
@@ -239,6 +244,7 @@ class LocationCollectionService : Service() {
     override fun onDestroy() {
         logger.i(TAG, "Service destroyed")
         logger.i(TAG, "Total locations collected: $locationCount")
+        isRunning = false
 
         serviceJob.cancel()
         serviceScope.cancel()

@@ -1,8 +1,6 @@
 package com.mahdisamavat.location
 
-import android.app.ActivityManager
 import android.app.Application
-import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat
 import com.mahdisamavat.core.logger.Logger
@@ -45,7 +43,7 @@ class LocationApp : Application() {
         logger.d(TAG, "Service enabled flag: $serviceEnabled")
 
         if (serviceEnabled) {
-            val isRunning = isServiceRunning(LocationCollectionService::class.java)
+            val isRunning = LocationCollectionService.isServiceRunning()
             logger.d(TAG, "Service currently running: $isRunning")
 
             if (!isRunning) {
@@ -58,12 +56,5 @@ class LocationApp : Application() {
                 }
             }
         }
-    }
-
-    private fun isServiceRunning(serviceClass: Class<*>): Boolean {
-        val manager = getSystemService(ACTIVITY_SERVICE) as ActivityManager
-        @Suppress("DEPRECATION")
-        return manager.getRunningServices(Integer.MAX_VALUE)
-            .any { it.service.className == serviceClass.name }
     }
 }
