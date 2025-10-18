@@ -2,6 +2,11 @@ package com.mahdisamavat.internet.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mahdisamavat.core.analytics.AnalyticsHelper
+import com.mahdisamavat.core.analytics.PerformanceMonitor
+import com.mahdisamavat.core.analytics.logCommandSent
+import com.mahdisamavat.core.analytics.logDataQuery
+import com.mahdisamavat.core.analytics.logError
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.ipc.model.Response
 import com.mahdisamavat.core.logger.Logger
@@ -19,12 +24,15 @@ import kotlinx.coroutines.launch
 class MainViewModel(
     private val commandRepository: CommandRepository,
     private val locationQueryRepository: LocationQueryRepository,
-    private val logger: Logger
+    private val logger: Logger,
+    private val analyticsHelper: AnalyticsHelper
 ) : ViewModel() {
 
     companion object {
         private const val TAG = "MainViewModel"
     }
+
+    private val performanceMonitor = PerformanceMonitor(analyticsHelper)
 
     private val _state = MutableStateFlow(MainContract.State())
     val state: StateFlow<MainContract.State> = _state.asStateFlow()
@@ -48,6 +56,9 @@ class MainViewModel(
 
     private fun startService() {
         logger.i(TAG, "Starting location service")
+        analyticsHelper.logCommandSent("START_SERVICE")
+        
+        val startTime = System.currentTimeMillis()
 
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
@@ -55,7 +66,10 @@ class MainViewModel(
             when (val result = commandRepository.sendCommand("START_SERVICE")) {
                 is Result.Success<Response> -> {
                     val response = result.data
+                    val latency = System.currentTimeMillis() - startTime
                     logger.i(TAG, "START_SERVICE command successful: ${response.getTypeName()}")
+                    
+                    performanceMonitor.checkIPCLatency("START_SERVICE", latency)
 
                     _state.value = _state.value.copy(
                         isLoading = false,
@@ -90,6 +104,7 @@ class MainViewModel(
 
     private fun stopService() {
         logger.i(TAG, "Stopping location service")
+        analyticsHelper.logCommandSent("STOP_SERVICE")
 
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
@@ -132,6 +147,9 @@ class MainViewModel(
 
     private fun getAllLocations() {
         logger.i(TAG, "Getting all locations")
+        analyticsHelper.logCommandSent("GET_ALL_LOCATIONS")
+        
+        val startTime = System.currentTimeMillis()
 
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
@@ -141,7 +159,11 @@ class MainViewModel(
                     val data = result.data
                     if (data is List<*>) {
                         val locations = data.filterIsInstance<Location>()
+                        val duration = System.currentTimeMillis() - startTime
                         logger.i(TAG, "Retrieved ${locations.size} locations")
+                        
+                        analyticsHelper.logDataQuery(locations.size)
+                        performanceMonitor.checkDatabasePerformance("query_all", duration, locations.size)
 
                         _state.value = _state.value.copy(
                             isLoading = false,
@@ -178,6 +200,7 @@ class MainViewModel(
 
     private fun getLatestLocation() {
         logger.i(TAG, "Getting latest location")
+        analyticsHelper.logCommandSent("GET_LATEST_LOCATION")
 
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
@@ -186,6 +209,7 @@ class MainViewModel(
                 is Result.Success -> {
                     val location = result.data as? Location
                     logger.i(TAG, "Retrieved latest location: ${location?.id}")
+                    analyticsHelper.logDataQuery(if (location != null) 1 else 0)
 
                     _state.value = _state.value.copy(
                         isLoading = false,
