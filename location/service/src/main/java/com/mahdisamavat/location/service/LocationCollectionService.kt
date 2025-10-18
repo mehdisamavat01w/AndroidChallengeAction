@@ -17,6 +17,11 @@ import androidx.core.app.ServiceCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
+import com.mahdisamavat.core.analytics.AnalyticsHelper
+import com.mahdisamavat.core.analytics.PerformanceMonitor
+import com.mahdisamavat.core.analytics.logLocationCollected
+import com.mahdisamavat.core.analytics.logServiceStarted
+import com.mahdisamavat.core.analytics.logServiceStopped
 import com.mahdisamavat.core.logger.Logger
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -38,8 +43,12 @@ class LocationCollectionService : Service() {
 
     @Inject
     lateinit var locationRepository: com.mahdisamavat.location.domain.repository.LocationRepository
+    
+    @Inject
+    lateinit var analyticsHelper: AnalyticsHelper
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var performanceMonitor: PerformanceMonitor
 
     private val serviceJob = Job()
     private val serviceScope = CoroutineScope(Dispatchers.Default + serviceJob)
@@ -67,6 +76,7 @@ class LocationCollectionService : Service() {
         logger.i(TAG, "Service created")
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        performanceMonitor = PerformanceMonitor(analyticsHelper)
         createNotificationChannel()
     }
 
@@ -74,6 +84,8 @@ class LocationCollectionService : Service() {
         logger.i(TAG, "Service started (intent=${intent?.action}, flags=$flags, startId=$startId)")
         startTime = System.currentTimeMillis()
         isRunning = true
+        
+        analyticsHelper.logServiceStarted("LocationCollectionService")
 
         startForegroundServiceWithNotification()
 
@@ -122,10 +134,17 @@ class LocationCollectionService : Service() {
                             is com.mahdisamavat.core.common.result.Result.Success -> {
                                 logger.i(
                                     TAG,
-                                    "Location collected and stored successfully (#$locationCount, id=${storeResult.data}): " +
+                                    "Location stored successfully (#$locationCount): " +
                                             "lat=${location.latitude}, lng=${location.longitude}, " +
                                             "accuracy=${location.accuracy}m"
                                 )
+                                
+                                analyticsHelper.logLocationCollected(
+                                    accuracy = location.accuracy,
+                                    provider = location.provider ?: "unknown"
+                                )
+                                
+                                performanceMonitor.checkLocationAccuracy(location.accuracy)
                             }
                             is com.mahdisamavat.core.common.result.Result.Failure -> {
                                 logger.e(TAG, "Failed to store location: ${storeResult.error.message}")
@@ -245,6 +264,8 @@ class LocationCollectionService : Service() {
         logger.i(TAG, "Service destroyed")
         logger.i(TAG, "Total locations collected: $locationCount")
         isRunning = false
+        
+        analyticsHelper.logServiceStopped("LocationCollectionService")
 
         serviceJob.cancel()
         serviceScope.cancel()
