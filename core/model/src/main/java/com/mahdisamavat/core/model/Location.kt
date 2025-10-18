@@ -2,19 +2,6 @@ package com.mahdisamavat.core.model
 
 import kotlinx.serialization.Serializable
 
-/**
- * A geographic location.
- *
- * @property id Unique identifier for the location
- * @property latitude Latitude in degrees
- * @property longitude Longitude in degrees
- * @property accuracy Estimated accuracy in meters
- * @property altitude Altitude in meters above sea level (if available)
- * @property bearing Bearing in degrees (if available)
- * @property speed Speed in meters/second (if available)
- * @property provider Source of the location (e.g., "gps", "network", "fused")
- * @property timestamp Unix timestamp in milliseconds when location was collected
- */
 @Serializable
 data class Location(
     val id: Long = 0,
