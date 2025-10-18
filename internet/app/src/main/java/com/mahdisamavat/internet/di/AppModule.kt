@@ -1,5 +1,7 @@
 package com.mahdisamavat.internet.di
 
+import com.mahdisamavat.core.analytics.AnalyticsHelper
+import com.mahdisamavat.core.analytics.NoOpAnalyticsHelper
 import com.mahdisamavat.core.ipc.serializer.MessageSerializer
 import com.mahdisamavat.core.logger.Logger
 import com.mahdisamavat.core.logger.TimberLogger
@@ -17,20 +19,24 @@ val appModule = module {
 
     single<Logger> { TimberLogger() }
 
+    single<AnalyticsHelper> { NoOpAnalyticsHelper() }
+
     single { MessageSerializer(get()) }
 
     single<CommandRepository> {
         CommandRepositoryImpl(
             context = androidContext(),
             messageSerializer = get(),
-            logger = get()
+            logger = get(),
+            analyticsHelper = get()
         )
     }
 
     single<LocationQueryRepository> {
         LocationQueryRepositoryImpl(
             context = androidContext(),
-            logger = get()
+            logger = get(),
+            analyticsHelper = get()
         )
     }
 
@@ -38,7 +44,8 @@ val appModule = module {
         MainViewModel(
             commandRepository = get(),
             locationQueryRepository = get(),
-            logger = get()
+            logger = get(),
+            analyticsHelper = get()
         )
     }
 }
