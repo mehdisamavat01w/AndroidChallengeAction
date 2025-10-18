@@ -45,8 +45,14 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest --stacktrace --continue
+      - name: Run core module tests
+        run: ./gradlew :core:analytics:test :core:common:test :core:logger:test :core:model:test :core:ipc:test :core:security:test --stacktrace --continue
+      
+      - name: Run domain and data layer tests
+        run: ./gradlew :location:domain:test :location:data:test :location:service:test :internet:domain:test :internet:data:test --stacktrace --continue
+      
+      - name: Run app tests
+        run: ./gradlew :location:app:testDebugUnitTest :internet:app:testDebugUnitTest --stacktrace --continue
 
       - name: Generate test report
         if: always()
