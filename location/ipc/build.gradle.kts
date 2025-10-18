@@ -25,12 +25,15 @@ android {
             jvmTarget = JvmTarget.JVM_17
         }
     }
+
 }
 
 dependencies {
     implementation(projects.core.model)
     implementation(projects.core.common)
     implementation(projects.core.ipc)
+    implementation(projects.core.security)
+    implementation(projects.core.analytics)
     implementation(projects.core.logger)
     implementation(projects.location.domain)
     implementation(projects.location.service)
