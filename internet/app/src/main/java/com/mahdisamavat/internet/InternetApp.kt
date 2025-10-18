@@ -2,6 +2,7 @@ package com.mahdisamavat.internet
 
 import android.app.Application
 import com.mahdisamavat.core.logger.Logger
+import com.mahdisamavat.internet.di.analyticsModule
 import com.mahdisamavat.internet.di.appModule
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
@@ -29,7 +30,7 @@ class InternetApp : Application() {
         startKoin {
             androidLogger()
             androidContext(this@InternetApp)
-            modules(appModule)
+            modules(analyticsModule, appModule)
         }
 
         logger.i(TAG, "Internet App initialized")
