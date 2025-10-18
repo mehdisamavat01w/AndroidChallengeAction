@@ -15,7 +15,6 @@
             android:exported="true"
             android:permission="com.mahdisamavat.PERMISSION_IPC" />
 
-        ]
         <receiver
             android:name=".receiver.BootCompletedReceiver"
             android:enabled="true"
