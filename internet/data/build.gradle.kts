@@ -30,6 +30,7 @@ dependencies {
     implementation(projects.core.common)
     implementation(projects.core.ipc)
     implementation(projects.core.logger)
+    implementation(projects.core.analytics)
     implementation(projects.internet.domain)
 
     implementation(libs.kotlinx.coroutines.core)
