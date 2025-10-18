@@ -31,6 +31,7 @@ dependencies {
     implementation(projects.core.model)
     implementation(projects.core.common)
     implementation(projects.core.logger)
+    implementation(projects.core.analytics)
     implementation(projects.core.security)
     implementation(projects.location.domain)
 
