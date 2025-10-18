@@ -1,5 +1,6 @@
 package com.mahdisamavat.location.data.repository
 
+import com.mahdisamavat.core.analytics.AnalyticsHelper
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.logger.Logger
 import com.mahdisamavat.core.model.Location
@@ -25,13 +26,15 @@ class LocationRepositoryImplTest {
     private lateinit var repository: LocationRepositoryImpl
     private lateinit var locationDao: LocationDao
     private lateinit var logger: Logger
+    private lateinit var analyticsHelper: AnalyticsHelper
     private val testDispatcher = UnconfinedTestDispatcher()
 
     @Before
     fun setup() {
         locationDao = mockk()
         logger = mockk(relaxed = true)
-        repository = LocationRepositoryImpl(locationDao, logger, testDispatcher)
+        analyticsHelper = mockk(relaxed = true)
+        repository = LocationRepositoryImpl(locationDao, logger, analyticsHelper, testDispatcher)
     }
 
     @Test
