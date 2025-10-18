@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -33,14 +34,17 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.mahdisamavat.core.analytics.TrackScreenViewEvent
 import com.mahdisamavat.core.common.util.DateTimeFormatter
 import com.mahdisamavat.core.model.Location
+import com.mahdisamavat.core.ui.TrackScrollJank
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LocationScreen(
     viewModel: LocationViewModel = hiltViewModel()
 ) {
+    TrackScreenViewEvent(screenName = "LocationScreen")
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
 
@@ -154,7 +158,11 @@ fun LocationScreen(
                     )
                 }
             } else {
+                val listState = rememberLazyListState()
+                TrackScrollJank(scrollableState = listState, stateName = "location:list")
+                
                 LazyColumn(
+                    state = listState,
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(state.locations) { location ->
