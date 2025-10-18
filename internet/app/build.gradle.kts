@@ -30,6 +30,7 @@ android {
         }
     }
 
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -57,6 +58,8 @@ dependencies {
     implementation(projects.core.model)
     implementation(projects.core.ipc)
     implementation(projects.core.logger)
+    implementation(projects.core.analytics)
+    implementation(projects.core.ui)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -77,4 +80,14 @@ dependencies {
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.turbine)
     testImplementation(libs.koin.test)
+
+    // E2E Testing (AndroidTest)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
+    androidTestImplementation("androidx.test:runner:1.6.1")
+    androidTestImplementation("androidx.test:rules:1.6.1")
+    androidTestImplementation("androidx.test.ext:junit-ktx:1.2.1")
+    androidTestImplementation("org.jetbrains.kotlin:kotlin-test:1.9.22")
+    androidTestImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.22")
 }
