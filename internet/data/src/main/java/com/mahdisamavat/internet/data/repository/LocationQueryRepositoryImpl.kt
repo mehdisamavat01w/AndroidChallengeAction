@@ -1,6 +1,9 @@
 package com.mahdisamavat.internet.data.repository
 
 import android.content.Context
+import com.mahdisamavat.core.analytics.AnalyticsHelper
+import com.mahdisamavat.core.analytics.PerformanceMonitor
+import com.mahdisamavat.core.analytics.logError
 import com.mahdisamavat.core.common.error.AppError
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.ipc.contract.IPCContract
@@ -11,14 +14,18 @@ import com.mahdisamavat.domain.repository.LocationQueryRepository
 
 class LocationQueryRepositoryImpl(
     private val context: Context,
-    private val logger: Logger
+    private val logger: Logger,
+    private val analyticsHelper: AnalyticsHelper
 ) : LocationQueryRepository {
 
+    private val performanceMonitor = PerformanceMonitor(analyticsHelper)
+    
     companion object {
         private const val TAG = "LocationQueryRepository"
     }
 
     override suspend fun getAllLocations(): Result<List<Location>> {
+        val startTime = System.currentTimeMillis()
         return try {
             logger.i(TAG, "Querying all locations from Location App")
 
@@ -83,10 +90,13 @@ class LocationQueryRepositoryImpl(
                 }
             }
 
-            logger.i(TAG, "Successfully retrieved ${locations.size} locations")
+            val duration = System.currentTimeMillis() - startTime
+            performanceMonitor.checkDatabasePerformance("getAllLocations_ContentProvider", duration, locations.size)
+            logger.i(TAG, "Successfully retrieved ${locations.size} locations in ${duration}ms")
             Result.success(locations)
 
         } catch (e: SecurityException) {
+            analyticsHelper.logError(e)
             logger.e(TAG, "Permission denied - apps not signed with same key", e)
             Result.failure(
                 AppError.Security(
@@ -98,6 +108,7 @@ class LocationQueryRepositoryImpl(
             )
         } catch (e: Exception) {
             logger.e(TAG, "Failed to query all locations", e)
+            analyticsHelper.logError(e)
             Result.failure(
                 AppError.IPC(
                     "Failed to query locations: ${e.message}",
@@ -110,6 +121,7 @@ class LocationQueryRepositoryImpl(
     }
 
     override suspend fun getLatestLocation(): Result<Location?> {
+        val startTime = System.currentTimeMillis()
         return try {
             logger.i(TAG, "Querying latest location from Location App")
 
@@ -167,10 +179,14 @@ class LocationQueryRepositoryImpl(
                 }
             }
 
+            val duration = System.currentTimeMillis() - startTime
+            performanceMonitor.checkDatabasePerformance("getLatestLocation_ContentProvider", duration, if (location != null) 1 else 0)
+            
             Result.success(location)
 
         } catch (e: SecurityException) {
             logger.e(TAG, "Permission denied - apps not signed with same key", e)
+            analyticsHelper.logError(e)
             Result.failure(
                 AppError.Security(
                     "Permission denied: ${e.message}",
@@ -181,6 +197,7 @@ class LocationQueryRepositoryImpl(
             )
         } catch (e: Exception) {
             logger.e(TAG, "Failed to query latest location", e)
+            analyticsHelper.logError(e)
             Result.failure(
                 AppError.IPC(
                     "Failed to query latest location: ${e.message}",
