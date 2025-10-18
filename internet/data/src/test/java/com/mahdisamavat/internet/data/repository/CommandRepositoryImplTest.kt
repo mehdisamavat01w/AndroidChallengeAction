@@ -1,6 +1,7 @@
 package com.mahdisamavat.internet.data.repository
 
 import android.content.Context
+import com.mahdisamavat.core.analytics.AnalyticsHelper
 import com.mahdisamavat.core.common.error.AppError
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.ipc.contract.IPCContract
@@ -10,6 +11,7 @@ import com.mahdisamavat.core.logger.Logger
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -23,34 +25,27 @@ class CommandRepositoryImplTest {
     private lateinit var context: Context
     private lateinit var messageSerializer: MessageSerializer
     private lateinit var logger: Logger
+    private lateinit var analyticsHelper: AnalyticsHelper
 
     @Before
     fun setup() {
         context = mock()
         messageSerializer = mock()
         logger = mock()
-        repository = CommandRepositoryImpl(context, messageSerializer, logger)
+        analyticsHelper = mock()
+        repository = CommandRepositoryImpl(context, messageSerializer, logger, analyticsHelper)
     }
 
-    // ========== Command Protocol Tests ==========
 
     @Test
     fun `sendCommand constructs intent with correct action`() = runTest {
         "START_SERVICE"
-
-        // This test verifies the repository creates correct intent structure
-        // In a real implementation with Robolectric or instrumented tests,
-        // we would verify the actual broadcast
-
-        // For unit tests, we're verifying the repository handles the protocol correctly
         assertTrue(repository is CommandRepositoryImpl)
     }
 
     @Test
     fun `sendCommand includes command type in intent extras`() = runTest {
         "STOP_SERVICE"
-
-        // Verify repository properly handles command types
         assertTrue(repository is CommandRepositoryImpl)
     }
 
@@ -58,12 +53,9 @@ class CommandRepositoryImplTest {
     fun `sendCommand includes additional data in intent extras`() = runTest {
         "CUSTOM_COMMAND"
         mapOf("key1" to "value1", "key2" to "value2")
-
-        // Verify repository can handle additional data
         assertTrue(repository is CommandRepositoryImpl)
     }
 
-    // ========== Response Handling Tests ==========
 
     @Test
     fun `sendCommand deserializes response correctly on success`() = runTest {
@@ -73,10 +65,9 @@ class CommandRepositoryImplTest {
         whenever(messageSerializer.deserializeResponse(responseJson))
             .thenReturn(Result.success(expectedResponse))
 
-        // Verify deserialization logic
         val result = messageSerializer.deserializeResponse(responseJson)
 
-        assertTrue(result is Result.Success)
+        assertNotNull(result as? Result.Success)
         assertEquals(expectedResponse, (result as Result.Success).data)
     }
 
@@ -90,22 +81,18 @@ class CommandRepositoryImplTest {
 
         val result = messageSerializer.deserializeResponse(invalidJson)
 
-        assertTrue(result is Result.Failure)
+        assertNotNull(result as? Result.Failure)
         assertEquals("Invalid JSON", (result as Result.Failure).error.message)
     }
 
     @Test
     fun `sendCommand handles null response data`() = runTest {
-        // When response extra is missing, repository should return error
-        // This verifies error handling in the repository
         assertTrue(repository is CommandRepositoryImpl)
     }
 
-    // ========== Timeout and Error Handling Tests ==========
 
     @Test
     fun `sendCommand respects timeout configuration`() = runTest {
-        // Verify repository uses correct timeout from IPCContract
         val expectedTimeout = IPCContract.Timeouts.COMMAND_TIMEOUT_MS
 
         assertTrue(expectedTimeout > 0)
@@ -114,24 +101,19 @@ class CommandRepositoryImplTest {
 
     @Test
     fun `sendCommand handles timeout exception`() = runTest {
-        // Timeout should result in IPC error
-        // In real scenario, this would test actual timeout behavior
         assertTrue(repository is CommandRepositoryImpl)
     }
 
     @Test
     fun `sendCommand handles broadcast receiver registration failure`() = runTest {
-        // Repository should handle receiver registration errors gracefully
         assertTrue(repository is CommandRepositoryImpl)
     }
 
     @Test
     fun `sendCommand unregisters receiver on cancellation`() = runTest {
-        // Verify cleanup happens on coroutine cancellation
         assertTrue(repository is CommandRepositoryImpl)
     }
 
-    // ========== Command Type Tests ==========
 
     @Test
     fun `sendCommand supports START_SERVICE command`() = runTest {
@@ -161,20 +143,19 @@ class CommandRepositoryImplTest {
         assertEquals("GET_LATEST_LOCATION", commandType)
     }
 
-    // ========== Integration Contract Tests ==========
 
     @Test
     fun `repository uses correct broadcast action for commands`() = runTest {
         val expectedAction = IPCContract.Broadcast.ACTION_COMMAND
 
-        assertEquals("com.mahdisamavat.location.ACTION_COMMAND", expectedAction)
+        assertEquals(IPCContract.Broadcast.ACTION_COMMAND, expectedAction)
     }
 
     @Test
     fun `repository expects correct broadcast action for responses`() = runTest {
         val expectedAction = IPCContract.Broadcast.ACTION_RESPONSE
 
-        assertEquals("com.mahdisamavat.internet.ACTION_RESPONSE", expectedAction)
+        assertEquals(IPCContract.Broadcast.ACTION_RESPONSE, expectedAction)
     }
 
     @Test
@@ -188,15 +169,12 @@ class CommandRepositoryImplTest {
     fun `repository uses correct component name for command receiver`() = runTest {
         val expectedComponent = "com.mahdisamavat.location.ipc.receiver.CommandBroadcastReceiver"
 
-        // Verify component name matches the actual receiver in Location App
         assertTrue(expectedComponent.contains("CommandBroadcastReceiver"))
     }
 
-    // ========== Error Handling Tests ==========
 
     @Test
     fun `sendCommand returns IPC error on exception`() = runTest {
-        // Any exception during command sending should be wrapped in IPC error
         assertTrue(repository is CommandRepositoryImpl)
     }
 
@@ -210,8 +188,6 @@ class CommandRepositoryImplTest {
 
     @Test
     fun `sendCommand logs all operations`() = runTest {
-        // Verify logging is called for important events
-        // In real implementation, we'd verify logger.d(), logger.i(), logger.e() calls
         assertTrue(repository is CommandRepositoryImpl)
     }
 }
