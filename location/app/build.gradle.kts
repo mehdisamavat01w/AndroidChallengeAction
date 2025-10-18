@@ -32,6 +32,7 @@ android {
         }
     }
 
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -62,6 +63,8 @@ dependencies {
     implementation(projects.core.ipc)
     implementation(projects.core.security)
     implementation(projects.core.logger)
+    implementation(projects.core.analytics)
+    implementation(projects.core.ui)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
