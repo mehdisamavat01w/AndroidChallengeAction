@@ -239,64 +239,8 @@ nbproject/
 # BUILD TOOLS
 # ============================================================
 
-# fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/
-fastlane/test_output/
-fastlane/readme.md
-
 # Proguard
 proguard/
-
-# Freeline
-freeline.py
-freeline/
-freeline_project_description.json
-
-# ============================================================
-# CI/CD & DEPLOYMENT
-# ============================================================
-
-# Terraform (if using Infrastructure as Code)
-*.tfstate
-*.tfstate.*
-
-# Docker override files (keep base docker-compose.yml)
-docker-compose.override.yml
-
-# Uploaded files / temp directories
-uploads/
-temp/
-
-# ============================================================
-# OPTIONAL: Node/Python (if using for tooling)
-# ============================================================
-
-# Node modules (if using Node.js build tools)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
-
-# Python (if using Python scripts)
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-venv/
-ENV/
-*.pyc
-
-# ============================================================
-# PROJECT SPECIFIC
-# ============================================================
-
-# Remove these if you're not using them:
-/nowinandroid
-sandbox/
 
 # ============================================================
 # END OF .gitignore
