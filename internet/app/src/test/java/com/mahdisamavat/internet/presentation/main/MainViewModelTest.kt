@@ -1,6 +1,7 @@
 package com.mahdisamavat.internet.presentation.main
 
 import com.mahdisamavat.core.common.error.AppError
+import com.mahdisamavat.core.analytics.AnalyticsHelper
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.ipc.model.Response
 import com.mahdisamavat.core.logger.Logger
@@ -21,6 +22,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.mockito.kotlin.any
+import org.mockito.kotlin.isNull
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 
@@ -31,6 +33,7 @@ class MainViewModelTest {
     private lateinit var commandRepository: CommandRepository
     private lateinit var locationQueryRepository: LocationQueryRepository
     private lateinit var logger: Logger
+    private lateinit var analyticsHelper: AnalyticsHelper
     private val testDispatcher = UnconfinedTestDispatcher()
     private val testScheduler = testDispatcher.scheduler
 
@@ -40,7 +43,8 @@ class MainViewModelTest {
         commandRepository = mock()
         locationQueryRepository = mock()
         logger = mock()
-        viewModel = MainViewModel(commandRepository, locationQueryRepository, logger)
+        analyticsHelper = mock()
+        viewModel = MainViewModel(commandRepository, locationQueryRepository, logger, analyticsHelper)
     }
 
     @After
@@ -48,7 +52,6 @@ class MainViewModelTest {
         Dispatchers.resetMain()
     }
 
-    // ========== Initial State Tests ==========
 
     @Test
     fun `initial state has default values`() = runTest {
@@ -62,12 +65,11 @@ class MainViewModelTest {
         assertNull(state.serviceRunning)
     }
 
-    // ========== Start Service Tests ==========
 
     @Test
     fun `handleIntent StartService success updates state`() = runTest {
         val response = Response.ServiceState(isRunning = true, message = "Service started")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.success(response))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.success(response))
 
         viewModel.handleIntent(MainContract.Intent.StartService)
         testScheduler.advanceUntilIdle()
@@ -82,7 +84,7 @@ class MainViewModelTest {
     @Test
     fun `handleIntent StartService failure updates error state`() = runTest {
         val error = AppError.IPC("Connection failed", null, false, "Test")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.failure(error))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.failure(error))
 
         viewModel.handleIntent(MainContract.Intent.StartService)
         testScheduler.advanceUntilIdle()
@@ -95,7 +97,7 @@ class MainViewModelTest {
     @Test
     fun `handleIntent StartService sets loading state during execution`() = runTest {
         val response = Response.ServiceState(isRunning = true, message = "Service started")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.success(response))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.success(response))
 
         viewModel.handleIntent(MainContract.Intent.StartService)
 
@@ -103,12 +105,11 @@ class MainViewModelTest {
         assertFalse(finalState.isLoading)
     }
 
-    // ========== Stop Service Tests ==========
 
     @Test
     fun `handleIntent StopService success updates state`() = runTest {
         val response = Response.ServiceState(isRunning = false, message = "Service stopped")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.success(response))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.success(response))
 
         viewModel.handleIntent(MainContract.Intent.StopService)
         testScheduler.advanceUntilIdle()
@@ -123,7 +124,7 @@ class MainViewModelTest {
     @Test
     fun `handleIntent StopService failure updates error state`() = runTest {
         val error = AppError.IPC("Service not found", null, false, "Test")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.failure(error))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.failure(error))
 
         viewModel.handleIntent(MainContract.Intent.StopService)
         testScheduler.advanceUntilIdle()
@@ -133,7 +134,6 @@ class MainViewModelTest {
         assertEquals("Service not found", state.error)
     }
 
-    // ========== Get All Locations Tests ==========
 
     @Test
     fun `handleIntent GetAllLocations success updates state with locations`() = runTest {
@@ -178,7 +178,6 @@ class MainViewModelTest {
         assertEquals("No locations available", state.error)
     }
 
-    // ========== Get Latest Location Tests ==========
 
     @Test
     fun `handleIntent GetLatestLocation success updates state with single location`() = runTest {
@@ -218,19 +217,16 @@ class MainViewModelTest {
         assertEquals("Permission denied", state.error)
     }
 
-    // ========== Clear Error Tests ==========
 
     @Test
     fun `handleIntent ClearError clears error state`() = runTest {
-        // Create a fresh ViewModel to avoid state from previous tests
-        val freshViewModel = MainViewModel(commandRepository, locationQueryRepository, logger)
+        val freshViewModel = MainViewModel(commandRepository, locationQueryRepository, logger, analyticsHelper)
 
         val error = AppError.IPC("Test error", null, false, "Test")
-        whenever(commandRepository.sendCommand(any(), any())).thenReturn(Result.failure(error))
+        whenever(commandRepository.sendCommand(any(), isNull())).thenReturn(Result.failure(error))
 
         freshViewModel.handleIntent(MainContract.Intent.StartService)
 
-        // Wait for state to update
         testScheduler.advanceUntilIdle()
 
         assertEquals("Test error", freshViewModel.state.value.error)
@@ -249,7 +245,6 @@ class MainViewModelTest {
         assertNull(viewModel.state.value.error)
     }
 
-    // ========== State Management Tests ==========
 
     @Test
     fun `multiple commands update state correctly`() = runTest {
@@ -305,7 +300,6 @@ class MainViewModelTest {
         assertEquals(latestLocation, viewModel.state.value.latestLocation)
     }
 
-    // ========== Helper Functions ==========
 
     private fun createLocation(
         id: Long,
