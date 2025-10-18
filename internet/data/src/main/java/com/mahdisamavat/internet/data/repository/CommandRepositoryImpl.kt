@@ -4,6 +4,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import com.mahdisamavat.core.analytics.AnalyticsHelper
+import com.mahdisamavat.core.analytics.PerformanceMonitor
+import com.mahdisamavat.core.analytics.logError
 import com.mahdisamavat.core.common.error.AppError
 import com.mahdisamavat.core.common.result.Result
 import com.mahdisamavat.core.ipc.contract.IPCContract
@@ -18,9 +21,12 @@ import kotlin.coroutines.resume
 class CommandRepositoryImpl(
     private val context: Context,
     private val messageSerializer: MessageSerializer,
-    private val logger: Logger
+    private val logger: Logger,
+    private val analyticsHelper: AnalyticsHelper
 ) : CommandRepository {
 
+    private val performanceMonitor = PerformanceMonitor(analyticsHelper)
+    
     companion object {
         private const val TAG = "CommandRepository"
     }
@@ -30,6 +36,7 @@ class CommandRepositoryImpl(
         commandType: String,
         data: Map<String, String>?
     ): Result<Response> {
+        val startTime = System.currentTimeMillis()
         return try {
             logger.d(TAG, "Sending command: $commandType")
 
@@ -124,10 +131,16 @@ class CommandRepositoryImpl(
                 }
             }
 
+            val duration = System.currentTimeMillis() - startTime
+            performanceMonitor.checkIPCLatency(commandType, duration)
+            logger.i(TAG, "Command $commandType completed in ${duration}ms")
+            
             response
 
         } catch (e: Exception) {
-            logger.e(TAG, "Failed to send command: $commandType", e)
+            val duration = System.currentTimeMillis() - startTime
+            logger.e(TAG, "Failed to send command: $commandType after ${duration}ms", e)
+            analyticsHelper.logError(e)
             Result.failure(
                 AppError.IPC(
                     "Failed to send command: ${e.message}",
