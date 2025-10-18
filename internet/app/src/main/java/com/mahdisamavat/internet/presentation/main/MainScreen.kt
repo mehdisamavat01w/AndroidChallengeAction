@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -34,9 +35,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.mahdisamavat.core.analytics.TrackScreenViewEvent
 import com.mahdisamavat.core.common.util.DateTimeFormatter
 import com.mahdisamavat.core.ipc.model.Response
 import com.mahdisamavat.core.model.Location
+import com.mahdisamavat.core.ui.TrackScrollJank
 import org.koin.androidx.compose.koinViewModel
 
 
@@ -45,6 +48,7 @@ import org.koin.androidx.compose.koinViewModel
 fun MainScreen(
     viewModel: MainViewModel = koinViewModel()
 ) {
+    TrackScreenViewEvent(screenName = "MainScreen")
     val state by viewModel.state.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
@@ -329,7 +333,11 @@ fun LocationDetailRow(label: String, value: String) {
 
 @Composable
 fun LocationsList(locations: List<Location>) {
+    val listState = rememberLazyListState()
+    TrackScrollJank(scrollableState = listState, stateName = "internet:locations")
+    
     LazyColumn(
+        state = listState,
         contentPadding = PaddingValues(vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
