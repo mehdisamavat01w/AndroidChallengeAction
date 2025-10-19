@@ -6,6 +6,18 @@ import androidx.room.PrimaryKey
 import com.mahdisamavat.core.model.Location
 
 
+/**
+ * Room entity for GPS location persistence.
+ * 
+ * Encrypted via SQLCipher with AES-256-GCM using KeyStore key.
+ * Maps between data layer and domain model.
+ * 
+ * @property id Auto-generated primary key
+ * @property latitude Decimal degrees
+ * @property longitude Decimal degrees
+ * @property accuracy Meters of precision
+ * @property timestamp Unix milliseconds for sorting
+ */
 @Entity(tableName = "locations")
 data class LocationEntity(
     @PrimaryKey(autoGenerate = true)
@@ -37,6 +49,10 @@ data class LocationEntity(
     val timestamp: Long
 ) {
 
+    /**
+     * Converts entity to domain model for business logic layer.
+     * @return Location domain model
+     */
     fun toDomainModel(): Location {
         return Location(
             id = id,
@@ -53,6 +69,11 @@ data class LocationEntity(
     
     companion object {
 
+        /**
+         * Creates entity from domain model for persistence.
+         * @param location Domain model from presentation/domain layer
+         * @return Entity ready for Room insertion
+         */
         fun fromDomainModel(location: Location): LocationEntity {
             return LocationEntity(
                 id = location.id,
@@ -68,6 +89,13 @@ data class LocationEntity(
         }
         
 
+        /**
+         * Creates entity from Android framework location.
+         * Extracts GPS data from FusedLocationProviderClient result.
+         * 
+         * @param androidLocation Framework location with GPS coordinates
+         * @return Entity ready for encrypted storage
+         */
         fun fromAndroidLocation(androidLocation: android.location.Location): LocationEntity {
             return LocationEntity(
                 latitude = androidLocation.latitude,
