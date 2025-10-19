@@ -5,7 +5,9 @@
 [![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-purple.svg)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-> **Note on CI/CD:** Due to GitHub Actions limitations on this repository, all CI/CD workflows (build, test, lint, documentation) are executed in a mirror repository. To review the complete CI/CD process and workflow results, please visit: [AndroidChallengeAction Repository](https://github.com/mehdisamavat01w/AndroidChallengeAction)
+> **Note on CI/CD and Documentation:** Due to GitHub Actions limitations on this repository, all CI/CD workflows (build, test, lint) and Dokka documentation generation are executed in a mirror repository. Both repositories contain identical code, but the mirror repository can successfully run GitHub Actions and deploy documentation to GitHub Pages.
+>
+> **To review CI/CD results and access API documentation, please visit:** [AndroidChallengeAction Repository](https://github.com/mehdisamavat01w/AndroidChallengeAction)
 
 Two Android applications demonstrating secure inter-process communication, background services, and Clean Architecture.
 
@@ -181,25 +183,27 @@ Pipeline **fails** if any tests fail or build breaks.
 
 ### API Documentation (Dokka)
 
-[View Complete API Documentation](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/)
+> **Note:** Due to GitHub Actions limitations on this repository, Dokka documentation is generated and deployed from the mirror repository. The documentation below links to the mirror repository's GitHub Pages.
+
+[View Complete API Documentation](https://mehdisamavat01w.github.io/AndroidChallengeAction/)
 
 Comprehensive Kotlin documentation for all modules, automatically generated with Dokka:
 
 #### Location App Modules:
-- **[Location App](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-app/)** - MVVM presentation layer, Compose UI
-- **[Location Data](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-data/)** - Room database, repositories, encrypted storage
-- **[Location Domain](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-domain/)** - Use cases, repository interfaces
-- **[Location Service](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-service/)** - Background GPS collection service
+- **[Location App](https://mehdisamavat01w.github.io/AndroidChallengeAction/location-app/)** - MVVM presentation layer, Compose UI
+- **[Location Data](https://mehdisamavat01w.github.io/AndroidChallengeAction/location-data/)** - Room database, repositories, encrypted storage
+- **[Location Domain](https://mehdisamavat01w.github.io/AndroidChallengeAction/location-domain/)** - Use cases, repository interfaces
+- **[Location Service](https://mehdisamavat01w.github.io/AndroidChallengeAction/location-service/)** - Background GPS collection service
 
 #### Internet App Modules:
-- **[Internet App](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-app/)** - MVI presentation layer, Compose UI
-- **[Internet Data](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-data/)** - IPC repositories (Broadcast, ContentProvider)
-- **[Internet Domain](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-domain/)** - Use cases for service control
+- **[Internet App](https://mehdisamavat01w.github.io/AndroidChallengeAction/internet-app/)** - MVI presentation layer, Compose UI
+- **[Internet Data](https://mehdisamavat01w.github.io/AndroidChallengeAction/internet-data/)** - IPC repositories (Broadcast, ContentProvider)
+- **[Internet Domain](https://mehdisamavat01w.github.io/AndroidChallengeAction/internet-domain/)** - Use cases for service control
 
 #### Core Modules:
-- **[Core Security](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-security/)** - AES-256 encryption, KeyStore management
-- **[Core IPC](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-ipc/)** - Inter-process communication contracts
-- **[Core Common](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-common/)** - Result types, error handling, utilities
+- **[Core Security](https://mehdisamavat01w.github.io/AndroidChallengeAction/core-security/)** - AES-256 encryption, KeyStore management
+- **[Core IPC](https://mehdisamavat01w.github.io/AndroidChallengeAction/core-ipc/)** - Inter-process communication contracts
+- **[Core Common](https://mehdisamavat01w.github.io/AndroidChallengeAction/core-common/)** - Result types, error handling, utilities
 
 ### Generate Documentation Locally
 
