@@ -1,7 +1,7 @@
 # Android Location Service System
 
-[![Build Status](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/ci.yml/badge.svg)](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/ci.yml)
-[![Documentation](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/dokka-docs.yml/badge.svg)](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/dokka-docs.yml)
+[![Build Status](https://github.com/mehdisamavat01w/AndroidChallengeAction/actions/workflows/ci.yml/badge.svg)](https://github.com/mehdisamavat01w/AndroidChallengeAction/actions/workflows/ci.yml)
+[![Documentation](https://github.com/mehdisamavat01w/AndroidChallengeAction/actions/workflows/dokka-docs.yml/badge.svg)](https://github.com/mehdisamavat01w/AndroidChallengeAction/actions/workflows/dokka-docs.yml)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-purple.svg)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
