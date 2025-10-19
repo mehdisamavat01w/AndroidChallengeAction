@@ -2,6 +2,23 @@ package com.mahdisamavat.core.model
 
 import kotlinx.serialization.Serializable
 
+/**
+ * Domain model for GPS location data.
+ * 
+ * Immutable value object used across all architecture layers.
+ * Serializable for IPC and persistence. Includes accuracy
+ * classification and formatting utilities.
+ * 
+ * @property id Unique identifier (0 if not persisted)
+ * @property latitude Decimal degrees
+ * @property longitude Decimal degrees
+ * @property accuracy Horizontal accuracy in meters
+ * @property altitude Meters above sea level (optional)
+ * @property bearing Direction of travel in degrees (optional)
+ * @property speed Speed in meters/second (optional)
+ * @property provider GPS, Network, or Fused
+ * @property timestamp Unix milliseconds when captured
+ */
 @Serializable
 data class Location(
     val id: Long = 0,
@@ -44,6 +61,13 @@ data class Location(
     
     companion object {
 
+        /**
+         * Creates domain model from Android framework Location.
+         * Extracts all available GPS data.
+         * 
+         * @param androidLocation Framework location from FusedLocationProvider
+         * @return Domain Location model
+         */
         fun from(androidLocation: android.location.Location): Location {
             return Location(
                 latitude = androidLocation.latitude,
