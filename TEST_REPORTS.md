@@ -313,7 +313,7 @@ Based on test coverage and static analysis:
 Add to README for build status:
 
 ```markdown
-![CI](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/workflows/CI/badge.svg)
+![CI](https://github.com/mehdisamavat01w/AndroidChallengeAction/workflows/CI/badge.svg)
 ```
 
 ### Test Trends
