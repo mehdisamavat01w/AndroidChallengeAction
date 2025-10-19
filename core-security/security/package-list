@@ -1,0 +1,10 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.core.security////PointingToDeclaration/security/com.mahdisamavat.core.security/index.html
+$dokka.location:com.mahdisamavat.core.security/KeyStoreManager.Companion///PointingToDeclaration/security/com.mahdisamavat.core.security/-key-store-manager/-companion/index.html
+$dokka.location:com.mahdisamavat.core.security/KeyStoreManager.Companion/DATABASE_KEY_ALIAS/#/PointingToDeclaration/security/com.mahdisamavat.core.security/-key-store-manager/-companion/-d-a-t-a-b-a-s-e_-k-e-y_-a-l-i-a-s.html
+$dokka.location:com.mahdisamavat.core.security/KeyStoreManager///PointingToDeclaration/security/com.mahdisamavat.core.security/-key-store-manager/index.html
+$dokka.location:com.mahdisamavat.core.security/KeyStoreManager/KeyStoreManager/#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/security/com.mahdisamavat.core.security/-key-store-manager/-key-store-manager.html
+$dokka.location:com.mahdisamavat.core.security/KeyStoreManager/getOrCreateDatabaseKey/#/PointingToDeclaration/security/com.mahdisamavat.core.security/-key-store-manager/get-or-create-database-key.html
+com.mahdisamavat.core.security
+

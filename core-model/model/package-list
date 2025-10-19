@@ -1,0 +1,38 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.core.model////PointingToDeclaration/model/com.mahdisamavat.core.model/index.html
+$dokka.location:com.mahdisamavat.core.model/Location.Companion///PointingToDeclaration/model/com.mahdisamavat.core.model/-location/-companion/index.html
+$dokka.location:com.mahdisamavat.core.model/Location.Companion/from/#android.location.Location/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/-companion/from.html
+$dokka.location:com.mahdisamavat.core.model/Location///PointingToDeclaration/model/com.mahdisamavat.core.model/-location/index.html
+$dokka.location:com.mahdisamavat.core.model/Location/Location/#kotlin.Long#kotlin.Double#kotlin.Double#kotlin.Float#kotlin.Double?#kotlin.Float?#kotlin.Float?#kotlin.String?#kotlin.Long/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/-location.html
+$dokka.location:com.mahdisamavat.core.model/Location/accuracy/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/accuracy.html
+$dokka.location:com.mahdisamavat.core.model/Location/altitude/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/altitude.html
+$dokka.location:com.mahdisamavat.core.model/Location/bearing/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/bearing.html
+$dokka.location:com.mahdisamavat.core.model/Location/getAccuracyLevel/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/get-accuracy-level.html
+$dokka.location:com.mahdisamavat.core.model/Location/getAccuracyString/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/get-accuracy-string.html
+$dokka.location:com.mahdisamavat.core.model/Location/getCoordinatesString/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/get-coordinates-string.html
+$dokka.location:com.mahdisamavat.core.model/Location/hasAltitude/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/has-altitude.html
+$dokka.location:com.mahdisamavat.core.model/Location/hasBearing/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/has-bearing.html
+$dokka.location:com.mahdisamavat.core.model/Location/hasSpeed/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/has-speed.html
+$dokka.location:com.mahdisamavat.core.model/Location/id/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/id.html
+$dokka.location:com.mahdisamavat.core.model/Location/isHighAccuracy/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/is-high-accuracy.html
+$dokka.location:com.mahdisamavat.core.model/Location/isLowAccuracy/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/is-low-accuracy.html
+$dokka.location:com.mahdisamavat.core.model/Location/isMediumAccuracy/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/is-medium-accuracy.html
+$dokka.location:com.mahdisamavat.core.model/Location/latitude/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/latitude.html
+$dokka.location:com.mahdisamavat.core.model/Location/longitude/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/longitude.html
+$dokka.location:com.mahdisamavat.core.model/Location/provider/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/provider.html
+$dokka.location:com.mahdisamavat.core.model/Location/speed/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/speed.html
+$dokka.location:com.mahdisamavat.core.model/Location/timestamp/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-location/timestamp.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState///PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/index.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/ServiceState/#kotlin.Boolean#kotlin.Long?#kotlin.Int#kotlin.Long?#kotlin.Int/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/-service-state.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/errorCount/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/error-count.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/getTimeSinceLastCollection/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/get-time-since-last-collection.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/getUptime/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/get-uptime.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/getUptimeString/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/get-uptime-string.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/isHealthy/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/is-healthy.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/isRunning/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/is-running.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/lastCollectionTime/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/last-collection-time.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/locationCount/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/location-count.html
+$dokka.location:com.mahdisamavat.core.model/ServiceState/startTime/#/PointingToDeclaration/model/com.mahdisamavat.core.model/-service-state/start-time.html
+com.mahdisamavat.core.model
+

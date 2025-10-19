@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Android Code Challenge - Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .module-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        .module-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        .module-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .module-card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .module-card a:hover {
+            background: #764ba2;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Android Code Challenge</h1>
+            <p>Complete API Documentation</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>🏗️ Location App Modules</h2>
+                <div class="modules">
+                    <div class="module-card">
+                        <h3>📱 App Module</h3>
+                        <p>Presentation layer with MVVM pattern, UI components, and ViewModels</p>
+                        <a href="location-app/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>💾 Data Module</h3>
+                        <p>Room database, encrypted storage with SQLCipher, and repositories</p>
+                        <a href="location-data/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>🎯 Domain Module</h3>
+                        <p>Business logic, use cases, and repository interfaces</p>
+                        <a href="location-domain/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>🔄 Service Module</h3>
+                        <p>Background GPS collection service with foreground notification</p>
+                        <a href="location-service/index.html">View Docs →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌐 Internet App Modules</h2>
+                <div class="modules">
+                    <div class="module-card">
+                        <h3>📱 App Module</h3>
+                        <p>MVI pattern presentation layer with Compose UI</p>
+                        <a href="internet-app/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>💾 Data Module</h3>
+                        <p>IPC repositories for broadcast and ContentProvider communication</p>
+                        <a href="internet-data/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>🎯 Domain Module</h3>
+                        <p>Use cases for service control and location queries</p>
+                        <a href="internet-domain/index.html">View Docs →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 Core Modules</h2>
+                <div class="modules">
+                    <div class="module-card">
+                        <h3>🔒 Security</h3>
+                        <p>AES-256 encryption, Android KeyStore management</p>
+                        <a href="core-security/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>🔗 IPC</h3>
+                        <p>Inter-process communication contracts and models</p>
+                        <a href="core-ipc/index.html">View Docs →</a>
+                    </div>
+                    <div class="module-card">
+                        <h3>🛠️ Common</h3>
+                        <p>Shared utilities, error handling, and result types</p>
+                        <a href="core-common/index.html">View Docs →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Technology Stack</h2>
+                <div>
+                    <span class="badge">Kotlin 2.2.20</span>
+                    <span class="badge">Clean Architecture</span>
+                    <span class="badge">MVVM</span>
+                    <span class="badge">MVI</span>
+                    <span class="badge">Hilt</span>
+                    <span class="badge">Koin</span>
+                    <span class="badge">Room + SQLCipher</span>
+                    <span class="badge">Coroutines</span>
+                    <span class="badge">Flow</span>
+                    <span class="badge">Jetpack Compose</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

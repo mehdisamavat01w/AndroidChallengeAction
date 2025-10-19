@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.mahdisamavat.core.analytics</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../index.html">
+                            analytics
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":core:analytics:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="analytics::com.mahdisamavat.core.analytics////PointingToDeclaration//108099421">
+  <div class="breadcrumbs"><a href="../../index.html">analytics</a><span class="delimiter">/</span><span class="current">com.mahdisamavat.core.analytics</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1088164664%2FClasslikes%2F108099421" anchor-label="AnalyticsEvent" id="1088164664%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-analytics-event/index.html"><span>Analytics</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1088164664%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-analytics-event/index.html">AnalyticsEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>extras<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-analytics-event/-param/index.html">AnalyticsEvent.Param</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1370782718%2FClasslikes%2F108099421" anchor-label="AnalyticsHelper" id="-1370782718%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-analytics-helper/index.html"><span>Analytics</span><wbr></wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1370782718%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-analytics-helper/index.html">AnalyticsHelper</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="5922564%2FClasslikes%2F108099421" anchor-label="AnalyticsModule" id="5922564%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-analytics-module/index.html"><span>Analytics</span><wbr></wbr><span><span>Module</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="5922564%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="dagger/Module///PointingToDeclaration/"><span class="token annotation builtin">Module</span></span></div></div><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-analytics-module/index.html">AnalyticsModule</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-825209052%2FClasslikes%2F108099421" anchor-label="NoOpAnalyticsHelper" id="-825209052%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-no-op-analytics-helper/index.html"><span>No</span><wbr></wbr><span>Op</span><wbr></wbr><span>Analytics</span><wbr></wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825209052%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-no-op-analytics-helper/index.html">NoOpAnalyticsHelper</a> : <a href="-analytics-helper/index.html">AnalyticsHelper</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-542513630%2FClasslikes%2F108099421" anchor-label="PerformanceMonitor" id="-542513630%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-performance-monitor/index.html"><span>Performance</span><wbr></wbr><span><span>Monitor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-542513630%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-performance-monitor/index.html">PerformanceMonitor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">analyticsHelper<span class="token operator">: </span><a href="-analytics-helper/index.html">AnalyticsHelper</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1362125346%2FClasslikes%2F108099421" anchor-label="PerformanceThresholds" id="-1362125346%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-performance-thresholds/index.html"><span>Performance</span><wbr></wbr><span><span>Thresholds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1362125346%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-performance-thresholds/index.html">PerformanceThresholds</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2147029072%2FClasslikes%2F108099421" anchor-label="StubAnalyticsHelper" id="2147029072%2FClasslikes%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stub-analytics-helper/index.html"><span>Stub</span><wbr></wbr><span>Analytics</span><wbr></wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2147029072%2FClasslikes%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="javax.inject/Singleton///PointingToDeclaration/"><span class="token annotation builtin">Singleton</span></span></div></div><span class="token keyword">class </span><a href="-stub-analytics-helper/index.html">StubAnalyticsHelper</a> <span><span class="token annotation builtin">@</span><span data-unresolved-link="javax.inject/Inject///PointingToDeclaration/"><span class="token annotation builtin">Inject</span></span> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">logger<span class="token operator">: </span><span data-unresolved-link="com.mahdisamavat.core.logger/Logger///PointingToDeclaration/">Logger</span></span></span><span class="token punctuation">)</span> : <a href="-analytics-helper/index.html">AnalyticsHelper</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1715274314%2FProperties%2F108099421" anchor-label="LocalAnalyticsHelper" id="1715274314%2FProperties%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-local-analytics-helper.html"><span>Local</span><wbr></wbr><span>Analytics</span><wbr></wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1715274314%2FProperties%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="-local-analytics-helper.html">LocalAnalyticsHelper</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/ProvidableCompositionLocal.html">ProvidableCompositionLocal</a><span class="token operator">&lt;</span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-377620372%2FFunctions%2F108099421" anchor-label="logCommandSent" id="-377620372%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-command-sent.html"><span>log</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>Sent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-377620372%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-command-sent.html"><span class="token function">logCommandSent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">commandType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2039557504%2FFunctions%2F108099421" anchor-label="logDatabaseOperation" id="-2039557504%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-database-operation.html"><span>log</span><wbr></wbr><span>Database</span><wbr></wbr><span><span>Operation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2039557504%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-database-operation.html"><span class="token function">logDatabaseOperation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">operation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">durationMs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">itemCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1759136177%2FFunctions%2F108099421" anchor-label="logDataQuery" id="1759136177%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-data-query.html"><span>log</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Query</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759136177%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-data-query.html"><span class="token function">logDataQuery</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dataCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1593243579%2FFunctions%2F108099421" anchor-label="logEncryptionOperation" id="-1593243579%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-encryption-operation.html"><span>log</span><wbr></wbr><span>Encryption</span><wbr></wbr><span><span>Operation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593243579%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-encryption-operation.html"><span class="token function">logEncryptionOperation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">operation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">durationMs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="656638410%2FFunctions%2F108099421" anchor-label="logError" id="656638410%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-error.html"><span>log</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="656638410%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-error.html"><span class="token function">logError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-431471131%2FFunctions%2F108099421" anchor-label="logIPCCommunicationLatency" id="-431471131%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-i-p-c-communication-latency.html"><span>log</span><wbr></wbr><span>IPCCommunication</span><wbr></wbr><span><span>Latency</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-431471131%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-i-p-c-communication-latency.html"><span class="token function">logIPCCommunicationLatency</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">command<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">latencyMs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-236444932%2FFunctions%2F108099421" anchor-label="logLocationAccuracyWarning" id="-236444932%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-location-accuracy-warning.html"><span>log</span><wbr></wbr><span>Location</span><wbr></wbr><span>Accuracy</span><wbr></wbr><span><span>Warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-236444932%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-location-accuracy-warning.html"><span class="token function">logLocationAccuracyWarning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accuracy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">threshold<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-566018273%2FFunctions%2F108099421" anchor-label="logLocationCollected" id="-566018273%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-location-collected.html"><span>log</span><wbr></wbr><span>Location</span><wbr></wbr><span><span>Collected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-566018273%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-location-collected.html"><span class="token function">logLocationCollected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">accuracy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">provider<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1785357542%2FFunctions%2F108099421" anchor-label="logMemoryPressure" id="-1785357542%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-memory-pressure.html"><span>log</span><wbr></wbr><span>Memory</span><wbr></wbr><span><span>Pressure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1785357542%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-memory-pressure.html"><span class="token function">logMemoryPressure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">usedMemoryMB<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">threshold<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1964324982%2FFunctions%2F108099421" anchor-label="logScreenView" id="-1964324982%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-screen-view.html"><span>log</span><wbr></wbr><span>Screen</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1964324982%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-screen-view.html"><span class="token function">logScreenView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">screenName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-67882865%2FFunctions%2F108099421" anchor-label="logServiceStarted" id="-67882865%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-service-started.html"><span>log</span><wbr></wbr><span>Service</span><wbr></wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-67882865%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-service-started.html"><span class="token function">logServiceStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serviceType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1348188477%2FFunctions%2F108099421" anchor-label="logServiceStopped" id="-1348188477%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-service-stopped.html"><span>log</span><wbr></wbr><span>Service</span><wbr></wbr><span><span>Stopped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1348188477%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token punctuation">.</span><a href="log-service-stopped.html"><span class="token function">logServiceStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serviceType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="919331618%2FFunctions%2F108099421" anchor-label="TrackScreenViewEvent" id="919331618%2FFunctions%2F108099421" data-filterable-set=":core:analytics:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":core:analytics:dokkaHtml/release" data-filterable-set=":core:analytics:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-track-screen-view-event.html"><span>Track</span><wbr></wbr><span>Screen</span><wbr></wbr><span>View</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="919331618%2FFunctions%2F108099421"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core:analytics:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-track-screen-view-event.html"><span class="token function">TrackScreenViewEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">screenName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">analyticsHelper<span class="token operator">: </span><a href="-analytics-helper/index.html">AnalyticsHelper</a><span class="token operator"> = </span>LocalAnalyticsHelper.current</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2025 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

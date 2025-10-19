@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.core.ui////PointingToDeclaration/ui/com.mahdisamavat.core.ui/index.html
+$dokka.location:com.mahdisamavat.core.ui//TrackDisposableJank/#kotlin.Array[kotlin.Any]#kotlin.Function2[androidx.compose.runtime.DisposableEffectScope,androidx.metrics.performance.PerformanceMetricsState.Holder,androidx.compose.runtime.DisposableEffectResult]/PointingToDeclaration/ui/com.mahdisamavat.core.ui/-track-disposable-jank.html
+$dokka.location:com.mahdisamavat.core.ui//TrackJank/#kotlin.Array[kotlin.Any]#kotlin.coroutines.SuspendFunction2[kotlinx.coroutines.CoroutineScope,androidx.metrics.performance.PerformanceMetricsState.Holder,kotlin.Unit]/PointingToDeclaration/ui/com.mahdisamavat.core.ui/-track-jank.html
+$dokka.location:com.mahdisamavat.core.ui//TrackScrollJank/#androidx.compose.foundation.gestures.ScrollableState#kotlin.String/PointingToDeclaration/ui/com.mahdisamavat.core.ui/-track-scroll-jank.html
+$dokka.location:com.mahdisamavat.core.ui//rememberMetricsStateHolder/#/PointingToDeclaration/ui/com.mahdisamavat.core.ui/remember-metrics-state-holder.html
+com.mahdisamavat.core.ui
+

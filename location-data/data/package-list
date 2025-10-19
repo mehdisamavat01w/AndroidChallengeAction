@@ -1,0 +1,64 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.location.data.dao////PointingToDeclaration/data/com.mahdisamavat.location.data.dao/index.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao///PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/index.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/deleteAllLocations/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/delete-all-locations.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/deleteLocation/#com.mahdisamavat.location.data.entity.LocationEntity/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/delete-location.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/deleteLocationsBefore/#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/delete-locations-before.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getAllLocations/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-all-locations.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getAllLocationsFlow/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-all-locations-flow.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLatestLocation/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-latest-location.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLocationById/#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-location-by-id.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLocationCount/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-location-count.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLocationCountFlow/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-location-count-flow.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLocationsBetween/#kotlin.Long#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-locations-between.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getLocationsSince/#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-locations-since.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getNewestTimestamp/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-newest-timestamp.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/getOldestTimestamp/#/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/get-oldest-timestamp.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/insertLocation/#com.mahdisamavat.location.data.entity.LocationEntity/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/insert-location.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/insertLocations/#kotlin.collections.List[com.mahdisamavat.location.data.entity.LocationEntity]/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/insert-locations.html
+$dokka.location:com.mahdisamavat.location.data.dao/LocationDao/updateLocation/#com.mahdisamavat.location.data.entity.LocationEntity/PointingToDeclaration/data/com.mahdisamavat.location.data.dao/-location-dao/update-location.html
+$dokka.location:com.mahdisamavat.location.data.entity////PointingToDeclaration/data/com.mahdisamavat.location.data.entity/index.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity.Companion///PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/-companion/index.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity.Companion/fromAndroidLocation/#android.location.Location/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/-companion/from-android-location.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity.Companion/fromDomainModel/#com.mahdisamavat.core.model.Location/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/-companion/from-domain-model.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity///PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/index.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/LocationEntity/#kotlin.Long#kotlin.Double#kotlin.Double#kotlin.Float#kotlin.Double?#kotlin.Float?#kotlin.Float?#kotlin.String?#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/-location-entity.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/accuracy/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/accuracy.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/altitude/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/altitude.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/bearing/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/bearing.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/id/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/id.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/latitude/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/latitude.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/longitude/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/longitude.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/provider/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/provider.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/speed/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/speed.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/timestamp/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/timestamp.html
+$dokka.location:com.mahdisamavat.location.data.entity/LocationEntity/toDomainModel/#/PointingToDeclaration/data/com.mahdisamavat.location.data.entity/-location-entity/to-domain-model.html
+$dokka.location:com.mahdisamavat.location.data.repository////PointingToDeclaration/data/com.mahdisamavat.location.data.repository/index.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl.Companion///PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/-companion/index.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl///PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/index.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/LocationRepositoryImpl/#com.mahdisamavat.location.data.dao.LocationDao#com.mahdisamavat.core.logger.Logger#com.mahdisamavat.core.analytics.AnalyticsHelper#kotlinx.coroutines.CoroutineDispatcher/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/-location-repository-impl.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/deleteAllLocations/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/delete-all-locations.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/deleteLocationsBefore/#kotlin.Long/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/delete-locations-before.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getAllLocations/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-all-locations.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getAllLocationsFlow/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-all-locations-flow.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getLatestLocation/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-latest-location.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getLocationCount/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-location-count.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getLocationCountFlow/#/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-location-count-flow.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/getRecentLocations/#kotlin.Int/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/get-recent-locations.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/storeAndroidLocation/#android.location.Location/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/store-android-location.html
+$dokka.location:com.mahdisamavat.location.data.repository/LocationRepositoryImpl/storeLocation/#com.mahdisamavat.core.model.Location/PointingToDeclaration/data/com.mahdisamavat.location.data.repository/-location-repository-impl/store-location.html
+$dokka.location:com.mahdisamavat.location.data////PointingToDeclaration/data/com.mahdisamavat.location.data/index.html
+$dokka.location:com.mahdisamavat.location.data/AppDatabase.Companion///PointingToDeclaration/data/com.mahdisamavat.location.data/-app-database/-companion/index.html
+$dokka.location:com.mahdisamavat.location.data/AppDatabase.Companion/DATABASE_NAME/#/PointingToDeclaration/data/com.mahdisamavat.location.data/-app-database/-companion/-d-a-t-a-b-a-s-e_-n-a-m-e.html
+$dokka.location:com.mahdisamavat.location.data/AppDatabase///PointingToDeclaration/data/com.mahdisamavat.location.data/-app-database/index.html
+$dokka.location:com.mahdisamavat.location.data/AppDatabase/AppDatabase/#/PointingToDeclaration/data/com.mahdisamavat.location.data/-app-database/-app-database.html
+$dokka.location:com.mahdisamavat.location.data/AppDatabase/locationDao/#/PointingToDeclaration/data/com.mahdisamavat.location.data/-app-database/location-dao.html
+$dokka.location:com.mahdisamavat.location.data/DatabaseBuilder///PointingToDeclaration/data/com.mahdisamavat.location.data/-database-builder/index.html
+$dokka.location:com.mahdisamavat.location.data/DatabaseBuilder/build/#android.content.Context#com.mahdisamavat.core.security.KeyStoreManager#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/data/com.mahdisamavat.location.data/-database-builder/build.html
+$dokka.location:com.mahdisamavat.location.data/DatabaseBuilder/getDatabaseSize/#android.content.Context/PointingToDeclaration/data/com.mahdisamavat.location.data/-database-builder/get-database-size.html
+com.mahdisamavat.location.data
+com.mahdisamavat.location.data.dao
+com.mahdisamavat.location.data.entity
+com.mahdisamavat.location.data.repository
+

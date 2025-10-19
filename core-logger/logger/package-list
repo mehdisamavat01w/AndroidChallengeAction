@@ -1,0 +1,27 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.core.logger////PointingToDeclaration/logger/com.mahdisamavat.core.logger/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel.DEBUG///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}logger/com.mahdisamavat.core.logger/-log-level/-d-e-b-u-g/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel.ERROR///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}logger/com.mahdisamavat.core.logger/-log-level/-e-r-r-o-r/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel.INFO///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}logger/com.mahdisamavat.core.logger/-log-level/-i-n-f-o/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel.VERBOSE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}logger/com.mahdisamavat.core.logger/-log-level/-v-e-r-b-o-s-e/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel.WARNING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}logger/com.mahdisamavat.core.logger/-log-level/-w-a-r-n-i-n-g/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel///PointingToDeclaration/logger/com.mahdisamavat.core.logger/-log-level/index.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel/entries/#/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-log-level/entries.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel/valueOf/#kotlin.String/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-log-level/value-of.html
+$dokka.location:com.mahdisamavat.core.logger/LogLevel/values/#/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-log-level/values.html
+$dokka.location:com.mahdisamavat.core.logger/Logger///PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/index.html
+$dokka.location:com.mahdisamavat.core.logger/Logger/d/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/d.html
+$dokka.location:com.mahdisamavat.core.logger/Logger/e/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/e.html
+$dokka.location:com.mahdisamavat.core.logger/Logger/i/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/i.html
+$dokka.location:com.mahdisamavat.core.logger/Logger/v/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/v.html
+$dokka.location:com.mahdisamavat.core.logger/Logger/w/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-logger/w.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger///PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/index.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/TimberLogger/#/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/-timber-logger.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/d/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/d.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/e/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/e.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/i/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/i.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/v/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/v.html
+$dokka.location:com.mahdisamavat.core.logger/TimberLogger/w/#kotlin.String#kotlin.String#kotlin.Throwable?/PointingToDeclaration/logger/com.mahdisamavat.core.logger/-timber-logger/w.html
+com.mahdisamavat.core.logger
+

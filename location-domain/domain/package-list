@@ -1,0 +1,39 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.location.domain.repository////PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/index.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository///PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/index.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/deleteAllLocations/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/delete-all-locations.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/deleteLocationsBefore/#kotlin.Long/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/delete-locations-before.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getAllLocations/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-all-locations.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getAllLocationsFlow/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-all-locations-flow.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getLatestLocation/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-latest-location.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getLocationCount/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-location-count.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getLocationCountFlow/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-location-count-flow.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/getRecentLocations/#kotlin.Int/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/get-recent-locations.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/storeAndroidLocation/#android.location.Location/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/store-android-location.html
+$dokka.location:com.mahdisamavat.location.domain.repository/LocationRepository/storeLocation/#com.mahdisamavat.core.model.Location/PointingToDeclaration/domain/com.mahdisamavat.location.domain.repository/-location-repository/store-location.html
+$dokka.location:com.mahdisamavat.location.domain.usecase////PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/index.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetAllLocationsUseCase///PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-all-locations-use-case/index.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetAllLocationsUseCase/GetAllLocationsUseCase/#com.mahdisamavat.location.domain.repository.LocationRepository/PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-all-locations-use-case/-get-all-locations-use-case.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetAllLocationsUseCase/invoke/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-all-locations-use-case/invoke.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetLatestLocationUseCase///PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-latest-location-use-case/index.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetLatestLocationUseCase/GetLatestLocationUseCase/#com.mahdisamavat.location.domain.repository.LocationRepository/PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-latest-location-use-case/-get-latest-location-use-case.html
+$dokka.location:com.mahdisamavat.location.domain.usecase/GetLatestLocationUseCase/invoke/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain.usecase/-get-latest-location-use-case/invoke.html
+$dokka.location:com.mahdisamavat.location.domain////PointingToDeclaration/domain/com.mahdisamavat.location.domain/index.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers.Default///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}domain/com.mahdisamavat.location.domain/-app-dispatchers/-default/index.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers.IO///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}domain/com.mahdisamavat.location.domain/-app-dispatchers/-i-o/index.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers.Main///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}domain/com.mahdisamavat.location.domain/-app-dispatchers/-main/index.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers///PointingToDeclaration/domain/com.mahdisamavat.location.domain/-app-dispatchers/index.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers/entries/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-app-dispatchers/entries.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers/valueOf/#kotlin.String/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-app-dispatchers/value-of.html
+$dokka.location:com.mahdisamavat.location.domain/AppDispatchers/values/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-app-dispatchers/values.html
+$dokka.location:com.mahdisamavat.location.domain/Dispatcher///PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatcher/index.html
+$dokka.location:com.mahdisamavat.location.domain/Dispatcher/dispatcher/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatcher/dispatcher.html
+$dokka.location:com.mahdisamavat.location.domain/DispatchersModule///PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatchers-module/index.html
+$dokka.location:com.mahdisamavat.location.domain/DispatchersModule/providesDefaultDispatcher/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatchers-module/provides-default-dispatcher.html
+$dokka.location:com.mahdisamavat.location.domain/DispatchersModule/providesIODispatcher/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatchers-module/provides-i-o-dispatcher.html
+$dokka.location:com.mahdisamavat.location.domain/DispatchersModule/providesMainDispatcher/#/PointingToDeclaration/domain/com.mahdisamavat.location.domain/-dispatchers-module/provides-main-dispatcher.html
+com.mahdisamavat.location.domain
+com.mahdisamavat.location.domain.repository
+com.mahdisamavat.location.domain.usecase
+

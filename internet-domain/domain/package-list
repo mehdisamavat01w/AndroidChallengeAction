@@ -1,0 +1,21 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.domain.repository////PointingToDeclaration/domain/com.mahdisamavat.domain.repository/index.html
+$dokka.location:com.mahdisamavat.domain.repository/CommandRepository///PointingToDeclaration/domain/com.mahdisamavat.domain.repository/-command-repository/index.html
+$dokka.location:com.mahdisamavat.domain.repository/CommandRepository/sendCommand/#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.String]?/PointingToDeclaration/domain/com.mahdisamavat.domain.repository/-command-repository/send-command.html
+$dokka.location:com.mahdisamavat.domain.repository/LocationQueryRepository///PointingToDeclaration/domain/com.mahdisamavat.domain.repository/-location-query-repository/index.html
+$dokka.location:com.mahdisamavat.domain.repository/LocationQueryRepository/getAllLocations/#/PointingToDeclaration/domain/com.mahdisamavat.domain.repository/-location-query-repository/get-all-locations.html
+$dokka.location:com.mahdisamavat.domain.repository/LocationQueryRepository/getLatestLocation/#/PointingToDeclaration/domain/com.mahdisamavat.domain.repository/-location-query-repository/get-latest-location.html
+$dokka.location:com.mahdisamavat.domain.usecase////PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/index.html
+$dokka.location:com.mahdisamavat.domain.usecase/GetAllLocationsUseCase///PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-get-all-locations-use-case/index.html
+$dokka.location:com.mahdisamavat.domain.usecase/GetAllLocationsUseCase/GetAllLocationsUseCase/#com.mahdisamavat.domain.repository.LocationQueryRepository/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-get-all-locations-use-case/-get-all-locations-use-case.html
+$dokka.location:com.mahdisamavat.domain.usecase/GetAllLocationsUseCase/invoke/#/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-get-all-locations-use-case/invoke.html
+$dokka.location:com.mahdisamavat.domain.usecase/StartLocationCollectionUseCase///PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-start-location-collection-use-case/index.html
+$dokka.location:com.mahdisamavat.domain.usecase/StartLocationCollectionUseCase/StartLocationCollectionUseCase/#com.mahdisamavat.domain.repository.CommandRepository/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-start-location-collection-use-case/-start-location-collection-use-case.html
+$dokka.location:com.mahdisamavat.domain.usecase/StartLocationCollectionUseCase/invoke/#/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-start-location-collection-use-case/invoke.html
+$dokka.location:com.mahdisamavat.domain.usecase/StopLocationCollectionUseCase///PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-stop-location-collection-use-case/index.html
+$dokka.location:com.mahdisamavat.domain.usecase/StopLocationCollectionUseCase/StopLocationCollectionUseCase/#com.mahdisamavat.domain.repository.CommandRepository/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-stop-location-collection-use-case/-stop-location-collection-use-case.html
+$dokka.location:com.mahdisamavat.domain.usecase/StopLocationCollectionUseCase/invoke/#/PointingToDeclaration/domain/com.mahdisamavat.domain.usecase/-stop-location-collection-use-case/invoke.html
+com.mahdisamavat.domain.repository
+com.mahdisamavat.domain.usecase
+

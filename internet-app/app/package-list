@@ -1,0 +1,63 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.internet.di////PointingToDeclaration/app/com.mahdisamavat.internet.di/index.html
+$dokka.location:com.mahdisamavat.internet.di//analyticsModule/#/PointingToDeclaration/app/com.mahdisamavat.internet.di/analytics-module.html
+$dokka.location:com.mahdisamavat.internet.di//appModule/#/PointingToDeclaration/app/com.mahdisamavat.internet.di/app-module.html
+$dokka.location:com.mahdisamavat.internet.presentation.main////PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//CommandButtonsSection/#kotlin.Boolean#kotlin.Boolean?#kotlin.Function1[com.mahdisamavat.internet.presentation.main.MainContract.Intent,kotlin.Unit]/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-command-buttons-section.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//ErrorCard/#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-error-card.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//LoadingIndicator/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-loading-indicator.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//LocationCard/#com.mahdisamavat.core.model.Location/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-location-card.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//LocationDetailRow/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-location-detail-row.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//LocationsList/#kotlin.collections.List[com.mahdisamavat.core.model.Location]/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-locations-list.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//MainScreen/#com.mahdisamavat.internet.presentation.main.MainViewModel/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-screen.html
+$dokka.location:com.mahdisamavat.internet.presentation.main//ResponseCard/#com.mahdisamavat.core.ipc.model.Response/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-response-card.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowError///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-error/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowError/ShowError/#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-error/-show-error.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowError/message/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-error/message.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowToast///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-toast/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowToast/ShowToast/#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-toast/-show-toast.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect.ShowToast/message/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/-show-toast/message.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Effect///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-effect/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent.ClearError///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/-clear-error/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent.GetAllLocations///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/-get-all-locations/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent.GetLatestLocation///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/-get-latest-location/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent.StartService///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/-start-service/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent.StopService///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/-stop-service/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.Intent///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-intent/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/State/#kotlin.Boolean#kotlin.collections.List[com.mahdisamavat.core.model.Location]#com.mahdisamavat.core.model.Location?#com.mahdisamavat.core.ipc.model.Response?#kotlin.String?#kotlin.Boolean?/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/-state.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/error/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/error.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/isLoading/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/is-loading.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/lastResponse/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/last-response.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/latestLocation/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/latest-location.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/locations/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/locations.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract.State/serviceRunning/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/-state/service-running.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainContract///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-contract/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel.Companion///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/-companion/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel///PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/index.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel/MainViewModel/#com.mahdisamavat.domain.repository.CommandRepository#com.mahdisamavat.domain.repository.LocationQueryRepository#com.mahdisamavat.core.logger.Logger#com.mahdisamavat.core.analytics.AnalyticsHelper/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/-main-view-model.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel/effect/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/effect.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel/handleIntent/#com.mahdisamavat.internet.presentation.main.MainContract.Intent/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/handle-intent.html
+$dokka.location:com.mahdisamavat.internet.presentation.main/MainViewModel/state/#/PointingToDeclaration/app/com.mahdisamavat.internet.presentation.main/-main-view-model/state.html
+$dokka.location:com.mahdisamavat.internet.ui.theme////PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/index.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//AndoTheme/#kotlin.Boolean#kotlin.Boolean#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-ando-theme.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//Pink40/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-pink40.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//Pink80/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-pink80.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//Purple40/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-purple40.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//Purple80/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-purple80.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//PurpleGrey40/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-purple-grey40.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//PurpleGrey80/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-purple-grey80.html
+$dokka.location:com.mahdisamavat.internet.ui.theme//Typography/#/PointingToDeclaration/app/com.mahdisamavat.internet.ui.theme/-typography.html
+$dokka.location:com.mahdisamavat.internet////PointingToDeclaration/app/com.mahdisamavat.internet/index.html
+$dokka.location:com.mahdisamavat.internet/InternetApp.Companion///PointingToDeclaration/app/com.mahdisamavat.internet/-internet-app/-companion/index.html
+$dokka.location:com.mahdisamavat.internet/InternetApp///PointingToDeclaration/app/com.mahdisamavat.internet/-internet-app/index.html
+$dokka.location:com.mahdisamavat.internet/InternetApp/InternetApp/#/PointingToDeclaration/app/com.mahdisamavat.internet/-internet-app/-internet-app.html
+$dokka.location:com.mahdisamavat.internet/InternetApp/onCreate/#/PointingToDeclaration/app/com.mahdisamavat.internet/-internet-app/on-create.html
+$dokka.location:com.mahdisamavat.internet/MainActivity///PointingToDeclaration/app/com.mahdisamavat.internet/-main-activity/index.html
+$dokka.location:com.mahdisamavat.internet/MainActivity/MainActivity/#/PointingToDeclaration/app/com.mahdisamavat.internet/-main-activity/-main-activity.html
+com.mahdisamavat.internet
+com.mahdisamavat.internet.di
+com.mahdisamavat.internet.presentation.main
+com.mahdisamavat.internet.ui.theme
+

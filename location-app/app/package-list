@@ -1,0 +1,63 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.location.di////PointingToDeclaration/app/com.mahdisamavat.location.di/index.html
+$dokka.location:com.mahdisamavat.location.di/AppModule///PointingToDeclaration/app/com.mahdisamavat.location.di/-app-module/index.html
+$dokka.location:com.mahdisamavat.location.di/AppModule/provideLogger/#/PointingToDeclaration/app/com.mahdisamavat.location.di/-app-module/provide-logger.html
+$dokka.location:com.mahdisamavat.location.di/DatabaseModule///PointingToDeclaration/app/com.mahdisamavat.location.di/-database-module/index.html
+$dokka.location:com.mahdisamavat.location.di/DatabaseModule/provideAppDatabase/#android.content.Context#com.mahdisamavat.core.security.KeyStoreManager#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/app/com.mahdisamavat.location.di/-database-module/provide-app-database.html
+$dokka.location:com.mahdisamavat.location.di/DatabaseModule/provideKeyStoreManager/#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/app/com.mahdisamavat.location.di/-database-module/provide-key-store-manager.html
+$dokka.location:com.mahdisamavat.location.di/DatabaseModule/provideLocationDao/#com.mahdisamavat.location.data.AppDatabase/PointingToDeclaration/app/com.mahdisamavat.location.di/-database-module/provide-location-dao.html
+$dokka.location:com.mahdisamavat.location.di/IPCModule///PointingToDeclaration/app/com.mahdisamavat.location.di/-i-p-c-module/index.html
+$dokka.location:com.mahdisamavat.location.di/IPCModule/provideMessageSerializer/#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/app/com.mahdisamavat.location.di/-i-p-c-module/provide-message-serializer.html
+$dokka.location:com.mahdisamavat.location.presentation////PointingToDeclaration/app/com.mahdisamavat.location.presentation/index.html
+$dokka.location:com.mahdisamavat.location.presentation//InfoRow/#kotlin.String#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-info-row.html
+$dokka.location:com.mahdisamavat.location.presentation//LocationItem/#com.mahdisamavat.core.model.Location/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-item.html
+$dokka.location:com.mahdisamavat.location.presentation//LocationScreen/#com.mahdisamavat.location.presentation.LocationViewModel/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-screen.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowError///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-error/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowError/ShowError/#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-error/-show-error.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowError/error/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-error/error.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowMessage///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-message/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowMessage/ShowMessage/#kotlin.String/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-message/-show-message.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect.ShowMessage/message/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/-show-message/message.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationEffect///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-effect/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationIntent.ClearError///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-intent/-clear-error/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationIntent.LoadLocations///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-intent/-load-locations/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationIntent.StartService///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-intent/-start-service/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationIntent.StopService///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-intent/-stop-service/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationIntent///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-intent/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/LocationState/#kotlin.collections.List[com.mahdisamavat.core.model.Location]#kotlin.Int#kotlin.Boolean#kotlin.Boolean#kotlin.String?/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/-location-state.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/error/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/error.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/isLoading/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/is-loading.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/isServiceRunning/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/is-service-running.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/locationCount/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/location-count.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationState/locations/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-state/locations.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationViewModel///PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-view-model/index.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationViewModel/LocationViewModel/#com.mahdisamavat.location.domain.usecase.GetAllLocationsUseCase#com.mahdisamavat.core.logger.Logger/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-view-model/-location-view-model.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationViewModel/effect/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-view-model/effect.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationViewModel/handleIntent/#com.mahdisamavat.location.presentation.LocationIntent/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-view-model/handle-intent.html
+$dokka.location:com.mahdisamavat.location.presentation/LocationViewModel/state/#/PointingToDeclaration/app/com.mahdisamavat.location.presentation/-location-view-model/state.html
+$dokka.location:com.mahdisamavat.location.ui.theme////PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/index.html
+$dokka.location:com.mahdisamavat.location.ui.theme//AndoTheme/#kotlin.Boolean#kotlin.Boolean#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-ando-theme.html
+$dokka.location:com.mahdisamavat.location.ui.theme//Pink40/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-pink40.html
+$dokka.location:com.mahdisamavat.location.ui.theme//Pink80/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-pink80.html
+$dokka.location:com.mahdisamavat.location.ui.theme//Purple40/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-purple40.html
+$dokka.location:com.mahdisamavat.location.ui.theme//Purple80/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-purple80.html
+$dokka.location:com.mahdisamavat.location.ui.theme//PurpleGrey40/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-purple-grey40.html
+$dokka.location:com.mahdisamavat.location.ui.theme//PurpleGrey80/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-purple-grey80.html
+$dokka.location:com.mahdisamavat.location.ui.theme//Typography/#/PointingToDeclaration/app/com.mahdisamavat.location.ui.theme/-typography.html
+$dokka.location:com.mahdisamavat.location////PointingToDeclaration/app/com.mahdisamavat.location/index.html
+$dokka.location:com.mahdisamavat.location/LocationApp.Companion///PointingToDeclaration/app/com.mahdisamavat.location/-location-app/-companion/index.html
+$dokka.location:com.mahdisamavat.location/LocationApp///PointingToDeclaration/app/com.mahdisamavat.location/-location-app/index.html
+$dokka.location:com.mahdisamavat.location/LocationApp/LocationApp/#/PointingToDeclaration/app/com.mahdisamavat.location/-location-app/-location-app.html
+$dokka.location:com.mahdisamavat.location/LocationApp/logger/#/PointingToDeclaration/app/com.mahdisamavat.location/-location-app/logger.html
+$dokka.location:com.mahdisamavat.location/LocationApp/onCreate/#/PointingToDeclaration/app/com.mahdisamavat.location/-location-app/on-create.html
+$dokka.location:com.mahdisamavat.location/MainActivity.Companion///PointingToDeclaration/app/com.mahdisamavat.location/-main-activity/-companion/index.html
+$dokka.location:com.mahdisamavat.location/MainActivity///PointingToDeclaration/app/com.mahdisamavat.location/-main-activity/index.html
+$dokka.location:com.mahdisamavat.location/MainActivity/MainActivity/#/PointingToDeclaration/app/com.mahdisamavat.location/-main-activity/-main-activity.html
+$dokka.location:com.mahdisamavat.location/MainActivity/analyticsHelper/#/PointingToDeclaration/app/com.mahdisamavat.location/-main-activity/analytics-helper.html
+com.mahdisamavat.location
+com.mahdisamavat.location.di
+com.mahdisamavat.location.presentation
+com.mahdisamavat.location.ui.theme
+

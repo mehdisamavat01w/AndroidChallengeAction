@@ -1,0 +1,14 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.internet.data.repository////PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/index.html
+$dokka.location:com.mahdisamavat.internet.data.repository/CommandRepositoryImpl.Companion///PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-command-repository-impl/-companion/index.html
+$dokka.location:com.mahdisamavat.internet.data.repository/CommandRepositoryImpl///PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-command-repository-impl/index.html
+$dokka.location:com.mahdisamavat.internet.data.repository/CommandRepositoryImpl/CommandRepositoryImpl/#android.content.Context#com.mahdisamavat.core.ipc.serializer.MessageSerializer#com.mahdisamavat.core.logger.Logger#com.mahdisamavat.core.analytics.AnalyticsHelper/PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-command-repository-impl/-command-repository-impl.html
+$dokka.location:com.mahdisamavat.internet.data.repository/CommandRepositoryImpl/sendCommand/#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.String]?/PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-command-repository-impl/send-command.html
+$dokka.location:com.mahdisamavat.internet.data.repository/LocationQueryRepositoryImpl.Companion///PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-location-query-repository-impl/-companion/index.html
+$dokka.location:com.mahdisamavat.internet.data.repository/LocationQueryRepositoryImpl///PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-location-query-repository-impl/index.html
+$dokka.location:com.mahdisamavat.internet.data.repository/LocationQueryRepositoryImpl/LocationQueryRepositoryImpl/#android.content.Context#com.mahdisamavat.core.logger.Logger#com.mahdisamavat.core.analytics.AnalyticsHelper/PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-location-query-repository-impl/-location-query-repository-impl.html
+$dokka.location:com.mahdisamavat.internet.data.repository/LocationQueryRepositoryImpl/getAllLocations/#/PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-location-query-repository-impl/get-all-locations.html
+$dokka.location:com.mahdisamavat.internet.data.repository/LocationQueryRepositoryImpl/getLatestLocation/#/PointingToDeclaration/data/com.mahdisamavat.internet.data.repository/-location-query-repository-impl/get-latest-location.html
+com.mahdisamavat.internet.data.repository
+

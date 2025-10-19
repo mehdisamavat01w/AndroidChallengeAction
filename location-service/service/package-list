@@ -1,0 +1,16 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.mahdisamavat.location.service////PointingToDeclaration/service/com.mahdisamavat.location.service/index.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService.Companion///PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/-companion/index.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService.Companion/isServiceRunning/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/-companion/is-service-running.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService///PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/index.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/LocationCollectionService/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/-location-collection-service.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/analyticsHelper/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/analytics-helper.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/locationRepository/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/location-repository.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/logger/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/logger.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/onBind/#android.content.Intent?/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/on-bind.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/onCreate/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/on-create.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/onDestroy/#/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/on-destroy.html
+$dokka.location:com.mahdisamavat.location.service/LocationCollectionService/onStartCommand/#android.content.Intent?#kotlin.Int#kotlin.Int/PointingToDeclaration/service/com.mahdisamavat.location.service/-location-collection-service/on-start-command.html
+com.mahdisamavat.location.service
+
