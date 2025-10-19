@@ -18,6 +18,18 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeout
 import kotlin.coroutines.resume
 
+/**
+ * Sends service control commands via broadcast IPC to Location App.
+ * 
+ * Uses explicit broadcast with response receiver pattern for secure
+ * inter-app communication. Suspends until response received or timeout.
+ * Measures IPC latency for performance monitoring.
+ * 
+ * @property context Application context for broadcast operations
+ * @property messageSerializer Handles Response serialization
+ * @property logger Logs command lifecycle and errors
+ * @property analyticsHelper Tracks IPC performance metrics
+ */
 class CommandRepositoryImpl(
     private val context: Context,
     private val messageSerializer: MessageSerializer,
@@ -32,6 +44,14 @@ class CommandRepositoryImpl(
     }
 
 
+    /**
+     * Sends command broadcast and awaits response via receiver.
+     * Times out after 10 seconds per IPCContract specification.
+     * 
+     * @param commandType START_SERVICE, STOP_SERVICE, or GET_STATE
+     * @param data Optional command parameters
+     * @return Result with Response or IPC error on timeout/failure
+     */
     override suspend fun sendCommand(
         commandType: String,
         data: Map<String, String>?
@@ -40,6 +60,7 @@ class CommandRepositoryImpl(
         return try {
             logger.d(TAG, "Sending command: $commandType")
 
+            // Suspend coroutine until response or timeout (10s)
             val response = withTimeout(IPCContract.Timeouts.COMMAND_TIMEOUT_MS) {
                 suspendCancellableCoroutine { continuation ->
                     val receiver = object : BroadcastReceiver() {
@@ -97,6 +118,7 @@ class CommandRepositoryImpl(
                         }
                     }
 
+                    // Register response receiver before sending command
                     val filter = IntentFilter(IPCContract.Broadcast.ACTION_RESPONSE)
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
                         context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED)
@@ -112,6 +134,7 @@ class CommandRepositoryImpl(
                         }
                     }
 
+                    // Explicit component for secure inter-app broadcast
                     val commandIntent = Intent(IPCContract.Broadcast.ACTION_COMMAND).apply {
                         component = android.content.ComponentName(
                             IPCContract.LOCATION_APP_PACKAGE,

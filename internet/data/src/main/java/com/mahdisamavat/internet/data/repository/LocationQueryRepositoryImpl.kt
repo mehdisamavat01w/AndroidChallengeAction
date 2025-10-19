@@ -12,6 +12,17 @@ import com.mahdisamavat.core.model.Location
 import com.mahdisamavat.domain.repository.LocationQueryRepository
 
 
+/**
+ * Queries encrypted location data via ContentProvider IPC.
+ * 
+ * Accesses Location App's exposed ContentProvider to retrieve
+ * stored GPS coordinates. Requires signature-level permission.
+ * Handles cursor parsing and performance monitoring.
+ * 
+ * @property context Application context for ContentResolver
+ * @property logger Logs query operations and errors
+ * @property analyticsHelper Tracks query performance
+ */
 class LocationQueryRepositoryImpl(
     private val context: Context,
     private val logger: Logger,
@@ -24,6 +35,11 @@ class LocationQueryRepositoryImpl(
         private const val TAG = "LocationQueryRepository"
     }
 
+    /**
+     * Queries all locations from Location App's ContentProvider.
+     * 
+     * @return Result with location list or IPC/Security error
+     */
     override suspend fun getAllLocations(): Result<List<Location>> {
         val startTime = System.currentTimeMillis()
         return try {
@@ -51,6 +67,7 @@ class LocationQueryRepositoryImpl(
 
             val locations = mutableListOf<Location>()
 
+            // Parse cursor rows into Location domain models
             cursor.use {
                 val idIndex = it.getColumnIndex(IPCContract.Provider.Columns.ID)
                 val latIndex = it.getColumnIndex(IPCContract.Provider.Columns.LATITUDE)
@@ -96,6 +113,7 @@ class LocationQueryRepositoryImpl(
             Result.success(locations)
 
         } catch (e: SecurityException) {
+            // Signature permission mismatch between apps
             analyticsHelper.logError(e)
             logger.e(TAG, "Permission denied - apps not signed with same key", e)
             Result.failure(
@@ -120,6 +138,12 @@ class LocationQueryRepositoryImpl(
         }
     }
 
+    /**
+     * Fetches most recent location via ContentProvider.
+     * Returns null if no locations exist in Location App.
+     * 
+     * @return Result with latest location or null
+     */
     override suspend fun getLatestLocation(): Result<Location?> {
         val startTime = System.currentTimeMillis()
         return try {
