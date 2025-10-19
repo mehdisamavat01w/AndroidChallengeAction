@@ -1,10 +1,6 @@
 package com.mahdisamavat.core.common.result
 
 import com.mahdisamavat.core.common.error.AppError
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onStart
 
 
 /**
@@ -63,6 +59,10 @@ sealed class Result<out T> {
             AppError.Unknown(throwable.message ?: "Unknown error", throwable, context = "Unknown")
         )
 
+        /**
+         * Creates loading result for operation in progress.
+         * @return Loading result
+         */
         fun <T> loading(): Result<T> = Loading
     }
 }
