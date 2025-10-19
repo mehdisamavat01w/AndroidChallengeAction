@@ -5,6 +5,8 @@
 [![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-purple.svg)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+> **Note on CI/CD:** Due to GitHub Actions limitations on this repository, all CI/CD workflows (build, test, lint, documentation) are executed in a mirror repository. To review the complete CI/CD process and workflow results, please visit: [AndroidChallengeAction Repository](https://github.com/mehdisamavat01w/AndroidChallengeAction)
+
 Two Android applications demonstrating secure inter-process communication, background services, and Clean Architecture.
 
 ## Overview
@@ -175,11 +177,11 @@ GitHub Actions workflow ([.github/workflows/ci.yml](.github/workflows/ci.yml)) r
 
 Pipeline **fails** if any tests fail or build breaks.
 
-## 📚 Documentation
+## Documentation
 
 ### API Documentation (Dokka)
 
-**🔗 [View Complete API Documentation](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/)**
+[View Complete API Documentation](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/)
 
 Comprehensive Kotlin documentation for all modules, automatically generated with Dokka:
 
