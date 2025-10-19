@@ -1,5 +1,10 @@
 # Android Location Service System
 
+[![Build Status](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/ci.yml/badge.svg)](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/ci.yml)
+[![Documentation](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/dokka-docs.yml/badge.svg)](https://github.com/y2311769/mahdiSamavatAndroidCodeChallenge/actions/workflows/dokka-docs.yml)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-purple.svg)](https://kotlinlang.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Two Android applications demonstrating secure inter-process communication, background services, and Clean Architecture.
 
 ## Overview
@@ -170,7 +175,43 @@ GitHub Actions workflow ([.github/workflows/ci.yml](.github/workflows/ci.yml)) r
 
 Pipeline **fails** if any tests fail or build breaks.
 
-## Documentation
+## 📚 Documentation
+
+### API Documentation (Dokka)
+
+**🔗 [View Complete API Documentation](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/)**
+
+Comprehensive Kotlin documentation for all modules, automatically generated with Dokka:
+
+#### Location App Modules:
+- **[Location App](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-app/)** - MVVM presentation layer, Compose UI
+- **[Location Data](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-data/)** - Room database, repositories, encrypted storage
+- **[Location Domain](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-domain/)** - Use cases, repository interfaces
+- **[Location Service](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/location-service/)** - Background GPS collection service
+
+#### Internet App Modules:
+- **[Internet App](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-app/)** - MVI presentation layer, Compose UI
+- **[Internet Data](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-data/)** - IPC repositories (Broadcast, ContentProvider)
+- **[Internet Domain](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/internet-domain/)** - Use cases for service control
+
+#### Core Modules:
+- **[Core Security](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-security/)** - AES-256 encryption, KeyStore management
+- **[Core IPC](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-ipc/)** - Inter-process communication contracts
+- **[Core Common](https://y2311769.github.io/mahdiSamavatAndroidCodeChallenge/core-common/)** - Result types, error handling, utilities
+
+### Generate Documentation Locally
+
+```bash
+# Generate HTML documentation for all modules
+./gradlew dokkaHtml
+
+# View generated documentation
+open location/data/build/dokka/html/index.html
+open internet/app/build/dokka/html/index.html
+open core/security/build/dokka/html/index.html
+```
+
+### Additional Documentation
 
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Architecture diagrams and communication flow
 - [docs/TESTS.md](docs/TESTS.md) - Scenario-based tests documentation
